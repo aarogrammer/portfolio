@@ -28,6 +28,11 @@ Bootstrap allows for me to quickly create an x-platform, fully-responsive applic
 ### Some PHP
 I use PHP to send emails from my contact form. The request to the php file is sent with AJAX, and waits for a response from the PHP file in JSON format. This allows for the user to stay on the page and get a response dynamically.
 
+## Files/Directories not pushed
+- **img** directory
+- **fonts** directory
+- **.htaccess** file 
+
 ## License
 
 MIT
