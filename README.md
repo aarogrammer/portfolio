@@ -1,14 +1,11 @@
 # Portfolio
-----
 I decided to re-develop my portfolio as I was bored of the way it works and I am not a fan of one-page websites anymore.
 I thought that developers that come across my portfolio may be curious on how I made it, and if it can help them with their projects, I am happy with that! This is also my first proper app built with Vue Router so I am sure things could be improved on so I welcome feedback!
 
 ## Notice
-----
 I will try and update this repository when I make big changes to my portfolio. My portfolio is a work in progress and may have some issues. If you come across any, please feel free to submit a pull request.
 
 ## What was used
-----
 ### VueJS & Vue Router
 VueJS is an amazing JavaScript framework for building user interfaces (UI). I have used VueJS & Vue Router to create a single page application (SPA) to deal and serve pages without the user having to leave a page or send another request to the server as they're all loaded through **index.html**. The pages are created in files ended in **.vue**, and webpack bundles them together in the **bundle.js** file. You can read more about Webpack in the section below.
 
@@ -32,6 +29,5 @@ Bootstrap allows for me to quickly create an x-platform, fully-responsive applic
 I use PHP to send emails from my contact form. The request to the php file is sent with AJAX, and waits for a response from the PHP file in JSON format. This allows for the user to stay on the page and get a response dynamically.
 
 ## License
-----
 
 MIT
