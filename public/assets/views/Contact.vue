@@ -74,6 +74,8 @@ export default {
         var number = document.getElementById("number").value;
         var message = document.getElementById("message").value;
 
+        var tokenSend = document.getElementById("token").value;
+
         // Create our xhr object
         var xhr;
         if (window.XMLHttpRequest) {
@@ -84,7 +86,7 @@ export default {
         }
 
         // Prepare data to send 
-        var data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message;
+        var data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message + "&token=" + tokenSend;
         xhr.open("POST", "mail.php", true); 
         xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                  
         xhr.send(data);

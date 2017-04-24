@@ -1,3 +1,16 @@
+<?php 
+
+    /**
+    *   Description: This file is used on my LAMP server as the index file. index.html is used for development on Nodejs.
+    */
+
+    session_start();
+    // Generate random token
+    $true = true;
+    $_SESSION['token'] = openssl_random_pseudo_bytes(18, $true);
+    // Encode token that is being sent
+    $tokenToSend =  urlencode($_SESSION['token']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +46,9 @@
     
     <link rel="icon" href="./assets/img/favicon.ico" type="image/ico" sizes="32x32" />
     <!-- Sticking with Bootstrap 3.x for x-platform support -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./assets/css/ionicons.css" rel="stylesheet" />
-    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./public/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./public/assets/css/ionicons.css" rel="stylesheet" />
+    <link href="./public/assets/css/style.css" rel="stylesheet" />
     <meta name="google-site-verification" content="5aenbty-INL73VaXROgbffu6GX1CDdaZXH-Y-IliC84" />
     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -55,12 +68,13 @@
         ga('send', 'pageview');
 
     </script>
+    <input type="hidden" value="<?php echo $tokenToSend; ?>" id="token" />
     <section id="app">
         
         
     </section>
     
     
-    <script src="./assets/js/bundle.js"></script>
+    <script src="./public/assets/js/bundle.js"></script>
 </body>
 </html>
