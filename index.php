@@ -26,16 +26,16 @@
 
     <meta property="og:title" content="Aaron Welsh - Portfolio" />
     <meta property="og:site_name" content="aaron-welsh" />
-    <meta property="og:url" content="http://aaron-welsh.co.uk" />
+    <meta property="og:url" content="https://aaron-welsh.co.uk" />
     <meta property="og:description" content="Hi, my Name is Aaron Welsh. I am a Freelance Web Developer from Glasgow, Scotland." />
-    <meta property="og:image" content="http://aaron-welsh.co.uk/assets/img/favicon.ico" />
+    <meta property="og:image" content="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:url" content="http://aaron-welsh.co.uk" />
+    <meta name="twitter:url" content="https://aaron-welsh.co.uk" />
     <meta name="twitter:title" content="Aaron Welsh - Portfolio" />
     <meta name="twitter:description" content="Hi, my Name is Aaron Welsh. I am a Freelance Web Developer from Glasgow, Scotland." />
-    <meta name="twitter:image" content="http://aaron-welsh.co.uk/assets/img/favicon.ico" />
+    <meta name="twitter:image" content="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" />
     <meta name="twitter:site" content="_aaronwelsh" />
 
     <!--[if IE]>
@@ -44,11 +44,11 @@
     <title>Aaron Welsh - Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
     
-    <link rel="icon" href="./assets/img/favicon.ico" type="image/ico" sizes="32x32" />
+    <link rel="icon" href="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" type="image/ico" sizes="32x32" />
     <!-- Sticking with Bootstrap 3.x for x-platform support -->
-    <link href="./public/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./public/assets/css/ionicons.css" rel="stylesheet" />
-    <link href="./public/assets/css/style.css" rel="stylesheet" />
+    <link href="https://static.aaron-welsh.co.uk/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://static.aaron-welsh.co.uk/assets/css/ionicons.min.css" rel="stylesheet" />
+    <link href="https://static.aaron-welsh.co.uk/assets/css/style.min.css" rel="stylesheet" />
     <meta name="google-site-verification" content="5aenbty-INL73VaXROgbffu6GX1CDdaZXH-Y-IliC84" />
     <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,6 +75,6 @@
     </section>
     
     
-    <script src="./public/assets/js/bundle.js"></script>
+    <script src="https://static.aaron-welsh.co.uk/assets/js/bundle.min.js"></script>
 </body>
 </html>

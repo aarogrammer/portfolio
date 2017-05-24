@@ -11,7 +11,7 @@
             <div class="row">
               <div class="col-sm-4 portfolio-item">
                   <router-link to="/projects/bearandmeerkat">
-                      <img src="https://aaron-welsh.co.uk/public/assets/img/bandm.png" width="900" height="650" class="img-responsive" alt="The Bear &amp; The Meerkat" />
+                      <img src="https://static.aaron-welsh.co.uk/assets/img/bandm.png" width="900" height="650" class="img-responsive" alt="The Bear &amp; The Meerkat" />
                   </router-link>
                   <div class="overlay">
                       <router-link to="/projects/bearandmeerkat">
@@ -22,7 +22,7 @@
 
               <div class="col-sm-4 portfolio-item">
                   <router-link to="/projects/360marine">
-                      <img src="https://aaron-welsh.co.uk/public/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360Marine">
+                      <img src="https://static.aaron-welsh.co.uk/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360Marine">
                   </router-link>
                   <div class="overlay">
                         <router-link to="/projects/360marine">
@@ -33,7 +33,7 @@
 
               <div class="col-sm-4 portfolio-item">
                   <router-link to="/projects/responsiveness">
-                      <img src="https://aaron-welsh.co.uk/public/assets/img/phone.png" width="900" height="650" class="img-responsive" alt="Responsiveness">
+                      <img src="https://static.aaron-welsh.co.uk/assets/img/phone.png" width="900" height="650" class="img-responsive" alt="Responsiveness">
                   </router-link>
                   <div class="overlay">
                         <router-link to="/projects/responsiveness">
@@ -44,7 +44,7 @@
 
                 <div class="col-sm-4 portfolio-item">
                     <router-link to="/projects/elcees">
-                        <img src="https://aaron-welsh.co.uk/public/assets/img/elc.png" width="900" height="650" class="img-responsive" alt="ElCee's">
+                        <img src="https://static.aaron-welsh.co.uk/assets/img/elc.png" width="900" height="650" class="img-responsive" alt="ElCee's">
                     </router-link>
                     <div class="overlay">
                         <router-link to="/projects/elcees">
@@ -55,7 +55,7 @@
 
                 <div class="col-sm-4 portfolio-item">
                     <router-link to="/projects/jordan">
-                        <img src="https://aaron-welsh.co.uk/public/assets/img/jordan.png" width="900" height="650" class="img-responsive" alt="Jordan">
+                        <img src="https://static.aaron-welsh.co.uk/assets/img/jordan.png" width="900" height="650" class="img-responsive" alt="Jordan">
                     </router-link>
                     <div class="overlay">
                         <router-link to="/projects/jordan">
@@ -66,7 +66,7 @@
 
                 <div class="col-sm-4 portfolio-item">
                     <router-link to="/projects/dsd">
-                        <img src="https://aaron-welsh.co.uk/public/assets/img/dsd.png" width="900" height="650" class="img-responsive" alt="DSD">
+                        <img src="https://static.aaron-welsh.co.uk/assets/img/dsd.png" width="900" height="650" class="img-responsive" alt="DSD">
                     </router-link>
                     <div class="overlay">
                         <router-link to="/projects/dsd">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="col-sm-4 portfolio-item">
                     <router-link to="/projects/cms">
-                        <img src="https://aaron-welsh.co.uk/public/assets/img/cms.png" width="900" height="650" class="img-responsive" alt="CMS">
+                        <img src="https://static.aaron-welsh.co.uk/assets/img/cms.png" width="900" height="650" class="img-responsive" alt="CMS">
                     </router-link>
                     <div class="overlay">
                         <router-link to="/projects/cms">
@@ -85,9 +85,9 @@
                     </div>
                 </div>
 
-                <div class="col-sm-4 portfolio-item" onClick="alert('Sorry, I haven\'t finished this page yet!')">
+                <div class="col-sm-4 portfolio-item" onClick="alert('Sorry, I haven\'t finished this page yet! Here is another project I have done though!')">
                     <router-link to="/projects/bearandmeerkat">
-                        <img src="https://aaron-welsh.co.uk/public/assets/img/scottishmusic.png" width="900" height="650" class="img-responsive" alt="Scottish Music">
+                        <img src="https://static.aaron-welsh.co.uk/assets/img/scottishmusic.png" width="900" height="650" class="img-responsive" alt="Scottish Music">
                     </router-link>
                     <div class="overlay">
                         <router-link to="/projects/bearandmeerkat">

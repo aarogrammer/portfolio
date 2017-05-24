@@ -18,7 +18,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">                        
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/bandm.png"  class="img-responsive" alt="The Bear &amp; The Meerkat" />
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/bandm.png"  class="img-responsive" alt="The Bear &amp; The Meerkat" />
                         </div>
 
                         <div class="col-md-12 copy-content">
@@ -55,7 +55,7 @@
                     <h2 class="text-center">Other Projects</h2>
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/360marine">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360Marine">
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360Marine">
                         </router-link>
                         <div class="overlay">
                                 <router-link to="/projects/360marine">
@@ -66,7 +66,7 @@
 
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/responsiveness">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/phone.png" width="900" height="650" class="img-responsive" alt="Responsiveness">
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/phone.png" width="900" height="650" class="img-responsive" alt="Responsiveness">
                         </router-link>
                         <div class="overlay">
                                 <router-link to="/projects/responsiveness">
@@ -77,7 +77,7 @@
 
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/elcees">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/elc.png" width="900" height="650" class="img-responsive" alt="ElCee's">
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/elc.png" width="900" height="650" class="img-responsive" alt="ElCee's">
                         </router-link>
                         <div class="overlay">
                             <router-link to="/projects/elcees">

@@ -18,14 +18,14 @@
                             </p>
                         </div>
                         <div class="col-md-6">                        
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/jordan.png"  class="img-responsive" alt="Jordan" />
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/jordan.png"  class="img-responsive" alt="Jordan" />
                         </div>
 
                         <div class="col-md-12 copy-content">
                            <h3>Development</h3>
                              <p>
                                With Jordan having great design skills, this project was simply me just turning his ideas in to code. Because of this, he provided me with all the graphics and a draft of what he
-                               wanted the portfolio to look like via PhotoShop. You can see an optimized version of his PDF draft <a href="Photoshop-Draft.gif">here</a>.
+                               wanted the portfolio to look like via PhotoShop. You can see an optimized version of his PDF draft <a href="https://static.aaron-welsh.co.uk/assets/img/Photoshop-Draft.gif">here</a>.
                             </p>
                             <h3>Communication</h3>
                              <p>
@@ -47,7 +47,7 @@
                     <h2 class="text-center">Other Projects</h2>
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/bearandmeerkat">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/bandm.png" width="900" height="650" class="img-responsive" alt="The Bear &amp; The Meerkat" />
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/bandm.png" width="900" height="650" class="img-responsive" alt="The Bear &amp; The Meerkat" />
                         </router-link>
                         <div class="overlay">
                             <router-link to="/projects/bearandmeerkat">
@@ -58,7 +58,7 @@
 
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/360marine">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360marine">
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360marine">
                         </router-link>
                         <div class="overlay">
                             <router-link to="/projects/360marine">
@@ -69,7 +69,7 @@
 
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/elcees">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/elc.png" width="900" height="650" class="img-responsive" alt="ElCee's">
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/elc.png" width="900" height="650" class="img-responsive" alt="ElCee's">
                         </router-link>
                         <div class="overlay">
                             <router-link to="/projects/elcees">

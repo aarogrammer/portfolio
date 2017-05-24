@@ -12,7 +12,7 @@
 session_start();
 
 $from           = 'noreply@aaron-welsh.co.uk'; // Send email as my web address to avoid being filtered as spam
-$successMessage = 'Your message has been successfully submitted. I will get back ASAP!'; //Went well
+$successMessage = 'Your message has been successfully submitted. I will get back ASAP!'; // Went well
 $errorMessage   = 'Whoops, something went wrong. Please try again!'; //Error
 
 

@@ -18,7 +18,7 @@
                             </p>
                         </div>
                         <div class="col-md-6">                        
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/elc.png"  class="img-responsive" alt="Elcees" />
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/elc.png"  class="img-responsive" alt="Elcees" />
                         </div>
 
                         <div class="col-md-12 copy-content">
@@ -56,7 +56,7 @@
                     <h2 class="text-center">Other Projects</h2>
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/bearandmeerkat">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/bandm.png" width="900" height="650" class="img-responsive" alt="The Bear &amp; The Meerkat" />
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/bandm.png" width="900" height="650" class="img-responsive" alt="The Bear &amp; The Meerkat" />
                         </router-link>
                         <div class="overlay">
                             <router-link to="/projects/bearandmeerkat">
@@ -67,7 +67,7 @@
 
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/responsiveness">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/phone.png" width="900" height="650" class="img-responsive" alt="Responsiveness">
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/phone.png" width="900" height="650" class="img-responsive" alt="Responsiveness">
                         </router-link>
                         <div class="overlay">
                                 <router-link to="/projects/responsiveness">
@@ -78,7 +78,7 @@
 
                     <div class="col-sm-4 portfolio-item">
                         <router-link to="/projects/360marine">
-                            <img src="https://aaron-welsh.co.uk/public/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360marine" />
+                            <img src="https://static.aaron-welsh.co.uk/assets/img/360marine.png" width="900" height="650" class="img-responsive" alt="360marine" />
                         </router-link>
                         <div class="overlay">
                             <router-link to="/projects/360marine">
