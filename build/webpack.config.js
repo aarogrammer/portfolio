@@ -1,5 +1,5 @@
 /**
- * @name Webpack config gile
+ * @name Webpack config file
  * @description Configure how we want webpack to work.
  * @version 2.0.0
  * @since 2.0.0
