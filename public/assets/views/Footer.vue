@@ -12,10 +12,10 @@
                     <div class="col-md-2 col-sm-2 col-md-offset-2">
                         <h3>Useful Links</h3>
                         <ul>
-                        <li><router-link to="/home">Home</router-link></li>
-                        <li><router-link to="/about">About</router-link></li>
-                        <li><router-link to="/projects">Projects</router-link></li>
-                        <li><router-link to="/contact">Contact</router-link></li>
+                        <li class="footer-item"><router-link to="/home">Home</router-link></li>
+                        <li class="footer-item"><router-link to="/about">About</router-link></li>
+                        <li class="footer-item"><router-link to="/projects">Projects</router-link></li>
+                        <li class="footer-item"><router-link to="/contact">Contact</router-link></li>
                         </ul>
                     </div>
                     <div class="col-md-3">

@@ -57,7 +57,28 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
+.ns {
+  width: 70%;
+  display: block;
+  margin: auto; 
+}
+@media (max-width: 767px) {
+  .ns {
+    width: 90%;
+  }
+}
+.ns-content {
+   text-align: center; 
+}
+.ns-content h1{
+  font-size: 30px;
+}
+.ns-content p {
+  font-size: 17px;
+}
+.ns-content .btn {
+  margin-bottom: 20px;
+}
 body {
   font-family: 'Source Sans Pro', sans-serif;
   line-height: 30px;

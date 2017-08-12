@@ -13,7 +13,7 @@
                 <div class="col-md-12 vertical-top">
                     <p>Hi, my Name is Aaron Welsh. I am a Freelance Web Developer from Glasgow, Scotland.</p>
                     <p>Check out my work below! I would love to do business with you!</p>
-                    <router-link to="/about" class="btn btn-custom btn-home" exact>
+                    <router-link to="/about" id="home-btn" class="btn btn-custom btn-home" exact>
                         Find out more!
                     </router-link>
                 </div>
@@ -25,7 +25,10 @@
     export default {
         data () {
             return {
+                
             }
         }
+        
     }
+    
 </script>

@@ -57,6 +57,7 @@ const router = new VueRouter({
 // Remove "You are running Vue in development mode." message in console. Appears when moved over to Apache.
 Vue.config.productionTip = false;
 
+
 // Init our Vue object and render our routes to <section id="app"></section> in the index.html file.
 const app = new Vue({
     el: '#app',
