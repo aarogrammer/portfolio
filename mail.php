@@ -3,8 +3,8 @@
 /**
  * Name: mail
  * Description: Takes the ajax request sent from the contact form, sends email if successful and responds with json.
- * @version 2.0.0
- * @since 2.0.0
+ * @version 2.0
+ * @since 2.0
  * @author Aaron Welsh <contact@aaron-welsh.co.uk>
  */
 

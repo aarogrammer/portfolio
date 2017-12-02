@@ -1,22 +1,25 @@
 /**
  * @name Main
  * @description File that webpack watches and outputs to bundle.js (see webpack.config.js)
- * @version 2.0.0
- * @since 2.0.0
+ * @version 2.5
+ * @since 2.0
  * @author Aaron Welsh <contact@aaron-welsh.co.uk>
  */
 
 // Import Vue and Vue Loader
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Es6Promise from 'es6-promise';
+Es6Promise.polyfill();
 Vue.use(VueRouter);
+
 
 // Import vee-validate for form validation on the client side
 import VeeValidate from 'vee-validate';
 Vue.use(VeeValidate);
 
 // Main app import
-import App from '../views/App.vue';
+import app from '../views/App.vue';
 
 // Views (parents)
 import Home from '../views/Home.vue';
@@ -35,6 +38,7 @@ import Cms from '../views/projects/cms.vue';
 
 // Set up routes with relevant views/components
 const router = new VueRouter({
+    mode: 'history',
     routes: [
         { path: '/', component: Home},
         { path: '/about', component: About},
@@ -54,13 +58,14 @@ const router = new VueRouter({
     ]
 });
 
-// Remove "You are running Vue in development mode." message in console. Appears when moved over to Apache.
-Vue.config.productionTip = false;
+// On new router load, scroll to top of the page.
+router.beforeEach((to, from, next) => {
+    window.scrollTo(0, 500);
+    next();
+});
 
-
-// Init our Vue object and render our routes to <section id="app"></section> in the index.html file.
-const app = new Vue({
+new Vue({
     el: '#app',
     router,
-    render: h => h(App)
+    render: h => h(app)
 });

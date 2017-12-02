@@ -1,17 +1,18 @@
 /**
  * @name Webpack config file
  * @description Configure how we want webpack to work.
- * @version 2.0.0
- * @since 2.0.0
+ * @version 2.5.0
+ * @since 1.0.0
  * @author Aaron Welsh <contact@aaron-welsh.co.uk>
  */
 
+const webpack = require('webpack');
+const env = require('./env.json');
 module.exports = {
-    entry: '../public/assets/js/main.js',
+    entry: '../src/js/main.js',
     output: {
-        filename: '../public/assets/js/bundle.js'
+        filename: '../dist/js/bundle.js'
     },
-    watch: true,
     module: {
         loaders: [
             {
@@ -28,10 +29,29 @@ module.exports = {
             },
         ]
     },
- 
+
     resolve: {
         alias: {
-            vue: 'vue/dist/vue.js'
+            vue: 'vue/dist/vue.common.js'
         }
     }
 };
+if (env.app.mode === 'production') {
+    module.exports.devtool = '#source-map';
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: true,
+            compress: {
+                warnings: false
+            }
+        }),
+        new webpack.LoaderOptionsPlugin({
+            minimize: true
+        })
+    ])
+}
