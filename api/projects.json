@@ -1,0 +1,117 @@
+{
+  "projects" : [
+    {
+      "awh" : {
+          "name" : "Allanwater Homes",
+          "route" : "awh",
+          "image" : "https://static.aaron-welsh.co.uk/assets/img/awh.png",
+          "description" : "Allanwater Homes wanted a revamp of their website, which was previously developed by The Buzz Agency but designed by another agency. This gave The Buzz Agency more control on how the website will look/work as we could fully design and develop the website. <br> Once the design team designed a mock-up and it was approved by the client, I started developing the new website. The website is built for WordPress and heavily uses an awesome plugin called Advanced Custom Fields to extend the functionality of WordPress. This allowed for me to add options for each page to easily allow the client to edit the website if they wanted to. <br> On top of normal development, I done a lot of extra work making sure the websites performance was fast and efficient on server load (and for client’s data/connection). I was able to have the website loading pages under 1 second (for most of the time!) and decent caching set up so there was less strain on the server.",
+          "conclusion" : "Although this project had a really tight timescale, I feel that the design team done an awesome job designing this website and that we pulled off a beautiful website.",
+          "notice" : "This project was developed when I was working for The Buzz Agency. I no longer work there and no longer develop on this site.<br />The screenshots provided are from the site I developed. The current live website may look different.",
+          "work" : "Web Development",
+          "demo" : "",
+          "code" : "",
+          "screenshots" : [
+            {
+              "image" : "https://static.aaron-welsh.co.uk/assets/img/awh-home.jpg"
+            },
+            {
+              "image" : "https://static.aaron-welsh.co.uk/assets/img/awh-location.jpg"
+            }
+          ],
+          "stack" : "WordPress (PHP based CMS), jQuery, Bootstrap 3.x",
+          "testimonial" : ""
+      },
+      "gideonrobinson" : {
+        "name" : "Gideon Robinson",
+        "route" : "gideonrobinson",
+        "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson.png",
+        "description" : "Gideon Robinson was a new client to The Buzz Agency and had their previous website developed by another agency in Glasgow. Their previous website wasn’t showcasing their amazing products and wasn’t reflecting well on their brand. <br> Gideon Robinson hired The Buzz Agency to design and develop their new website. The website was built for WordPress for ease of management. With it being a new website, this gave me a lot of flexibility on how I would build this website. I decided to approach the codebase in an Object Oriented (OO) architecture so that it was easier to maintain and so that certain methods can easily be reused. I had never developed a WordPress website using OO PHP, which was challenging and pretty enjoyable.",
+        "conclusion" : "The design team at The Buzz Agency yet again knocked it out the park with a beautiful design. This made my job as a developer much easier with specific guidelines to follow to create a beautiful application. This was a great project and was fun meeting up with Gideon to understand how he wanted his brand to be presented online.",
+        "notice" : "This project was developed when I was working for The Buzz Agency. I no longer work there and no longer develop on this site. <br> The screenshots provided are from the site I developed. The current live website may look different.",
+        "work" : "Web Development",
+        "demo" : "",
+        "code" : "",
+        "screenshots" : [
+          {
+            "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-home.jpg",
+            "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-service.jpg",
+            "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-contact.jpg"
+          }
+        ],
+        "stack" : "WordPress (PHP based CMS), jQuery, Bootstrap 3.x",
+        "testimonial" : ""
+      },
+      "thebearandmeerkat" : {
+        "name" : "The Bear & The Meerkat",
+        "route" : "thebearandmeerkat",
+        "image" : "https://static.aaron-welsh.co.uk/assets/img/bandm.png",
+        "description" : "For this project I decided to go a bit more adventurous and use an exciting technology - AngularJS, and some Angular modules such as ui-router, to set up routing and ngAnimate to animate views (pages) to dynamically come in, rather than having to wait for the page to load. <br> I have used AngularJS before when developing applications when using the MEAN stack, but that was simply for creating RESTful API’s and some data binding. The use of AngularJS this time around was all about user experience. <br> When a user clicks on a link to load a new page, I slide the page into their view, rather than having them wait around for a page to load. All pages are pretty small in file size so they load almost instantly, giving a fun, book-like website to look through. <br> The design was created using Bootstrap, a front-end framework for creating fully responsive web applications. This allows for a quicker turn around as I can use Bootstrap elements, such as the container and columns, to have everything grouped together so that they respond well together. Of course a lot of CSS on my end had to be done, Bootstrap made it much easier to develop.",
+        "conclusion" : "A fun, yet challenging project having a chance to work with amazing technologies like AngularJS, and being able to work concurrently with designers to build graphics and a brand.",
+        "notice" : "This project is for a start up that myself, and friends who have a passion for the creative industry started up over the summer. The website is currently offline and I will be putting a demo back up soon. If you would like more information, please feel free to contact me <a href='mailto:contact@aaronwelsh.co.uk'>contact@aaron-welsh.co.uk</a>",
+        "work" : "Web Development",
+        "demo" : "",
+        "code" : "",
+        "screenshots" : [],
+        "stack" : "AngularJS, Bootstrap 3.x",
+        "testimonial" : ""
+      },
+      "360marine" : {
+        "name" : "360marine",
+        "route" : "360marine",
+        "image" : "https://static.aaron-welsh.co.uk/assets/img/360marine.png",
+        "description" : "Callum approached me with the goal of having a fresh, clean website to compete in the Marine industry. It was obvious after a little bit of research that none of his competitors had much of a web presence and that their websites were very outdated. This gives 360Marine a chance to stand out. <br> Callum and I met a few times to discuss how he wants his company to be presented online, how we can define his brand to make a large impact, and overall how to get potential business from his website. <br> The solution was to create a fun, friendly website that was easy to look at and didn’t feel like a task to find out information. With it being an information based website, we found it would make most sense to have a one page website, that is broken in sections, and allows for the potential client to get in contact.",
+        "conclusion" : "It was great hearing Callum's story on why he started 360Marine and to help a business with a bright-future take its first steps online.<br> The design of the website was fun to create, having photography done to add more character to the design.",
+        "notice" : "Demo is still active but may load weirdly due to the SVG. This isn't a production site so I will get around to fixing this.",
+        "work" : "Web Development",
+        "demo" : "https://aaron-welsh.co.uk/demos/360marine",
+        "code" : "",
+        "screenshots" : [],
+        "stack" : "jQuery, Bootstrap 3.x",
+        "testimonial" : ""
+      },
+      "responsiveness" : {
+        "name" : "Responsiveness",
+        "route" : "responsiveness",
+        "image" : "https://static.aaron-welsh.co.uk/assets/img/phone.png",
+        "description" : "This project was mainly developed in JavaScript. The project idea was simple - load a website using an iFrame and then manipulate it using JavaScript.<br /> The main goal was to keep the project scalable so that future development can be done by others. The projects code is developed using JavaScript's prototype object to simplify and make the code easy to modify and understand. <br /> All the source code can be found on <a href='https://github.com/aarogrammer/responsiveness'>Github</a> and can can easily be forked!'",
+        "conclusion" : "Overall this tool is very useful in easily testing the websites design on specific resolutions. It can be very tedious having to resize your browser to test how your website responds and this tool allows you to simply enter the URL and then choose whatever sizes you want.",
+        "notice" : "",
+        "work" : "Web Development",
+        "demo" : "https://aaron-welsh.co.uk/demos/responsiveness",
+        "code" : "https://github.com/aarogrammer/responsiveness",
+        "screenshots" : [],
+        "stack" : "JavaScript, Bootstrap 3.x",
+        "testimonial" : ""
+      },
+      "elcees" : {
+        "name" : "Elcee's",
+        "route" : "elcees",
+        "image" : "https://static.aaron-welsh.co.uk/assets/img/elc.png",
+        "description" : "With Elcee's being a completely brand new salon and of course not having a previous website, I was completely free to design and develop this website from scatch.<br> I met up with Elcee's owner, Leeanne to discuss what kind of website she would like, and about the overall design of the website. Meeting at her salon was a great way to understand what Elcee's is, and have a general feel of the salon.<br> I designed the website to look similar to the design of the salon, using similar fonts and colours to achieve the final product",
+        "conclusion" : "Communication was always maintained throughout the project with regular meetings and messages exchanged. I was always updating Leeanne with any ideas I had, and asking for her opinion.",
+        "notice" : "",
+        "work" : "Web Development",
+        "demo" : "https://aaron-welsh.co.uk/demos/elcees/",
+        "code" : "",
+        "screenshots" : [],
+        "stack" : "jQuery, Bootstrap 3.x",
+        "testimonial" : "Aaron produced a brilliant website for my salon. The colour scheme went well with the black and white theme in the salon. We wanted it to be modern, clean and not have too much going on.<br> A lot of salon websites can be too cluttered and a bit of an eye sore and that's what we wanted to avoid. Aaron was professional and informative. I would definitely recommend his services. <br> -Leeanne Callaghan. El CEE'S Hair and Beauty."
+      },
+      "jordan" : {
+        "name" : "Jordan Gadeke",
+        "route" : "jordan",
+        "image" : "https://static.aaron-welsh.co.uk/assets/img/jordan.png",
+        "description" : "With Jordan having great design skills, this project was simply me just turning his ideas in to code. Because of this, he provided me with all the graphics and a draft of what he wanted the portfolio to look like via PhotoShop. You can see an optimized version of his PDF draft <a href='https://static.aaron-welsh.co.uk/assets/img/Photoshop-Draft.gif'>here</a>.",
+        "conclusion" : "It was a great experience looking at an idea from an image and making that in to code. I feel that the website totally replicated what Jordan required from his draft and I was happy with the final product.",
+        "notice" : "",
+        "work" : "Web Development",
+        "demo" : "https://aaron-welsh.co.uk/demos/jordan",
+        "code" : "",
+        "screenshots" : [],
+        "stack" : "jQuery, Bootstrap 3.x",
+        "testimonial" : ""
+      }
+    }
+  ]
+}
