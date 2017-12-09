@@ -81,11 +81,16 @@
                 </div>
             </div>
         </section>
+        <other-projects></other-projects>
     </div>
 </template>
 
 <script>
+    import OtherProjects from './components/OtherProjects.vue';
     export default {
+        components: {
+            'other-projects': OtherProjects
+        },
         mounted: function() {
             this.getProjects();
         },
