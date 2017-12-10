@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section class="portfolio other-projects">
+        <section class="other-projects">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -12,11 +12,11 @@
 
                     <div v-for="project in content.slice(0, 3)">
                         <div class="col-sm-4 portfolio-item">
-                            <router-link :to="{path: '/projects/' + project.route + '/'}">
+                            <router-link v-on:click.native="projectClick(project)" :to="{path: '/projects/' + project.route + '/'}">
                                 <img :src="project.image" width="900" height="650" class="img-responsive" :alt="project.name" />
                             </router-link>
                             <div class="overlay">
-                                <router-link :to="{path: '/projects/' + project.route}">
+                                <router-link v-on:click.native="projectClick(project)" :to="{path: '/projects/' + project.route}">
                                     <h3>{{project.name}}</h3>
                                 </router-link>
                             </div>
@@ -54,7 +54,7 @@
             },
             shuffle: function(obj) {
                 let arr = [];
-                // Bit messy but looping a good few times so a few items are added to the array. I can then just display three with v-for
+                // Loop through keys and store them all for later usage. I can then just display three with v-for
                 let keys = Object.keys(obj);
                 for (let i = 1; i <= keys.length; i++) {
 
@@ -67,11 +67,19 @@
                         let index = arr.indexOf(obj[randomKey]);
                         arr.splice(index, 1);
                     }
-                    // Push item to array.
-                    arr.push(obj[randomKey]);
+                    // Ensure project doesn't show if already in view
+                    if(this.$route.path.split("/").pop() !== obj[randomKey].route) {
+                        // Push item to array.
+                        arr.push(obj[randomKey]);
+                    }
 
                 }
                 this.content = arr;
+            },
+            projectClick: function(data) {
+                // When router-link clicked, commit our project object to the store so we can use it in our Client.vue
+                this.$store.commit('updateProject', data);
+                this.shuffle(this.projects); // Shuffle the projects again
             }
         }
     }

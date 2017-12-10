@@ -19,69 +19,73 @@
 </style>
 <template>
     <div>
-        <section class="project-template">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <router-link to="/projects" class="btn btn-goback">
-                            Go back
-                        </router-link>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
-                        <div class="col-md-6">
-                            <h2>{{name}}</h2>
-                            <div>
-                                Work: {{work}}
+        <transition name="easeInOut">
+            <div>
+                <section class="project-template">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <router-link to="/projects" class="btn btn-goback">
+                                    Go back
+                                </router-link>
                             </div>
+                            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+                                <div class="col-md-6">
+                                    <h2>{{name}}</h2>
+                                    <div>
+                                        Work: {{work}}
+                                    </div>
 
-                            <div v-if="code">
-                                <a :href="code"><span class="icon ion-social-github"></span></a>
-                            </div>
+                                    <div v-if="code">
+                                        <a :href="code"><span class="icon ion-social-github"></span></a>
+                                    </div>
 
-                            <div v-if="demo">
-                                <a :href="demo">Demo</a>
-                            </div>
+                                    <div v-if="demo">
+                                        <a :href="demo">Demo</a>
+                                    </div>
 
-                            <div v-if="screenshots">
-                                <div class="inline-div" v-for="screenshot, key in screenshots">
-                                    <a :href="screenshot.image">Screenshot {{++key}}</a>
+                                    <div v-if="screenshots">
+                                        <div class="inline-div" v-for="screenshot, key in screenshots">
+                                            <a :href="screenshot.image">Screenshot {{++key}}</a>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        Languages/Frameworks: {{stack}}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <img :src="image" class="img-responsive" :alt="name + ' logo'" />
+                                </div>
+
+                                <div class="col-md-12 copy-content">
+
+                                    <div v-if="notice">
+                                        <h3>Notice</h3>
+                                        <p class="breadcrumb" v-html="notice"></p>
+                                    </div>
+
+                                    <div v-if="description">
+                                        <h3>Development</h3>
+                                        <p v-html="description"></p>
+                                    </div>
+
+                                    <div v-if="testimonial">
+                                        <h3>Testimonial</h3>
+                                        <p v-html="testimonial" class="testimonial breadcrumb"></p>
+                                    </div>
+                                    <div v-if="conclusion">
+                                        <h3>Conclusion</h3>
+                                        <p v-html="conclusion"></p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div>
-                                Languages/Frameworks: {{stack}}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <img :src="image" class="img-responsive" :alt="name + ' logo'" />
-                        </div>
-
-                        <div class="col-md-12 copy-content">
-
-                            <div v-if="notice">
-                                <h3>Notice</h3>
-                                <p class="breadcrumb" v-html="notice"></p>
-                            </div>
-
-                            <div v-if="description">
-                                <h3>Development</h3>
-                                <p v-html="description"></p>
-                            </div>
-
-                            <div v-if="testimonial">
-                                <h3>Testimonial</h3>
-                                <p v-html="testimonial" class="testimonial breadcrumb"></p>
-                            </div>
-                            <div v-if="conclusion">
-                                <h3>Conclusion</h3>
-                                <p v-html="conclusion"></p>
-                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
+                <other-projects></other-projects>
             </div>
-        </section>
-        <other-projects></other-projects>
+        </transition>
     </div>
 </template>
 
@@ -115,7 +119,7 @@
             getProjects: function() {
                 this.$http.get( '/api/projects.json')
                 .then((res) => {
-
+                    console.log(this.$store.state.project)
                     // Grab project object are loop through until matched route is found
                     this.projects = res.data.projects[0];
                     for(let prop in this.projects) {
@@ -143,6 +147,26 @@
                 .catch((res) => {
                     console.error(`Err: ${ res }`);
                 });
+            }
+        },
+        computed: {
+            project: function() {
+                return this.$store.getters.getProject;
+            }
+        },
+        watch: {
+            'project': function() {
+                this.name = this.project.name;
+                this.image = this.project.image;
+                this.description = this.project.description;
+                this.conclusion = this.project.conclusion;
+                this.notice = this.project.notice;
+                this.work = this.project.work;
+                this.demo = this.project.demo;
+                this.code = this.project.code;
+                this.screenshots = this.project.screenshots;
+                this.stack = this.project.stack;
+                this.testimonial = this.project.testimonial;
             }
         }
     }

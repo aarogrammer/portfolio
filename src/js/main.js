@@ -9,6 +9,7 @@
 // Import Vue and Vue Loader
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import Vuex from 'vuex';
 import Es6Promise from 'es6-promise';
 import Axios from 'axios';
 
@@ -20,6 +21,7 @@ Vue.prototype.$http = axios;
 
 Es6Promise.polyfill();
 Vue.use(VueRouter);
+Vue.use(Vuex);
 
 // Import vee-validate for form validation on the client side
 import VeeValidate from 'vee-validate';
@@ -55,6 +57,7 @@ router.beforeEach((to, from, next) => {
 
 new Vue({
     el: '#app',
+    store: require('./store/store').default,
     router,
     render: h => h(app)
 });

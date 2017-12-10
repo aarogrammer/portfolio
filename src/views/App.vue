@@ -2,7 +2,7 @@
     <div>
         <main-header></main-header>
         <main-nav></main-nav>
-        <transition name="slideInLeft">
+        <transition name="easeInOut">
             <router-view id="main"></router-view>
         </transition>    
         <main-footer></main-footer>

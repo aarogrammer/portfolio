@@ -44,7 +44,7 @@
     <!-- Sticking with Bootstrap 3.x for x-platform support -->
     <link href="https://static.aaron-welsh.co.uk/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://static.aaron-welsh.co.uk/assets/css/ionicons.min.css" rel="stylesheet" />
-    <link href="https://static.aaron-welsh.co.uk/assets/css/style.min.css" rel="stylesheet" />
+    <link href="/src/css/style.css" rel="stylesheet" />
     <meta name="google-site-verification" content="5aenbty-INL73VaXROgbffu6GX1CDdaZXH-Y-IliC84" />
 
     <!--[if lt IE 9]>
