@@ -41,12 +41,14 @@
 
     <link rel="icon" href="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" type="image/ico" sizes="32x32" />
 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700|Source+Sans+Pro" rel="stylesheet" />
     <link rel="stylesheet" href="./src/css/pure-min.css" />
     <link rel="stylesheet" href="./src/css/base-min.css" />
     <link rel="stylesheet" href="./src/css/grids-responsive-min.css" />
     <link rel="stylesheet" href="./src/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
     <meta name="google-site-verification" content="5aenbty-INL73VaXROgbffu6GX1CDdaZXH-Y-IliC84" />
+
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

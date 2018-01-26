@@ -1,11 +1,8 @@
 <template>
     <div>
-        <main-header></main-header>
-        <main-nav></main-nav>
         <transition name="easeInOut">
             <router-view id="main"></router-view>
-        </transition>    
-        <main-footer></main-footer>
+        </transition>
     </div>
 </template>
 <script>
@@ -45,11 +42,6 @@
         },
         mounted() {
 
-            // Event listener to scroll to main content once home button is clicked (button in header)
-            const homeBtn = document.getElementById('home-btn');
-            homeBtn.addEventListener('click', () => {
-                scrollToView('main', 600);
-            });
 
             // Event listener to scroll to main content once nav link clicked            
             const navLink = document.getElementsByClassName('features-wraper');
