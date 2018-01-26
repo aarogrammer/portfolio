@@ -56,7 +56,7 @@
                 let arr = [];
                 // Loop through keys and store them all for later usage. I can then just display three with v-for
                 let keys = Object.keys(obj);
-                for (let i = 1; i <= keys.length; i++) {
+                for(let i = 1; i <= keys.length; i++) {
 
                     // Get objects keys and randomise the key use in this iteration
                     let index = Math.floor(Math.random() * keys.length);
@@ -72,7 +72,6 @@
                         // Push item to array.
                         arr.push(obj[randomKey]);
                     }
-
                 }
                 this.content = arr;
             },

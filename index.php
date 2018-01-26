@@ -38,13 +38,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
     <title>Aaron Welsh - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
-    
+
     <link rel="icon" href="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" type="image/ico" sizes="32x32" />
-    <!-- Sticking with Bootstrap 3.x for x-platform support -->
-    <link href="https://static.aaron-welsh.co.uk/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://static.aaron-welsh.co.uk/assets/css/ionicons.min.css" rel="stylesheet" />
-    <link href="/src/css/style.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/css/pure-min.css" />
+    <link rel="stylesheet" href="./src/css/base-min.css" />
+    <link rel="stylesheet" href="./src/css/grids-responsive-min.css" />
+    <link rel="stylesheet" href="./src/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <meta name="google-site-verification" content="5aenbty-INL73VaXROgbffu6GX1CDdaZXH-Y-IliC84" />
 
     <!--[if lt IE 9]>
@@ -79,12 +80,7 @@
 
     </script>
     <input type="hidden" value="<?php echo $tokenToSend; ?>" id="token" />
-    <section id="app">
-        
-        
-    </section>
-    
-    
+    <section id="app"></section>
     <script src="./dist/js/bundle.js"></script>
 </body>
 </html>

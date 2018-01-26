@@ -119,7 +119,6 @@
             getProjects: function() {
                 this.$http.get( '/api/projects.json')
                 .then((res) => {
-                    console.log(this.$store.state.project)
                     // Grab project object are loop through until matched route is found
                     this.projects = res.data.projects[0];
                     for(let prop in this.projects) {
