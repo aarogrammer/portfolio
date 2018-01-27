@@ -25,16 +25,7 @@
         animateScroll(document.body, id.offsetTop, duration);
     }
 
-    import Header from './Header.vue';
-    import Nav from './Nav.vue';
-    import Footer from './Footer.vue';
     export default {
-        components: {
-            'main-header' : Header,
-            'main-nav' : Nav,
-            'main-footer' : Footer
-            
-            },
         data () {
             return {
                
