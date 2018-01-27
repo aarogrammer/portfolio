@@ -23,7 +23,8 @@
         "button" : [
           {
             "route" : "/about",
-            "text" : "Get to know me!"
+            "text" : "Get to know me!",
+            "label" : "About Page"
           }
         ]
       },

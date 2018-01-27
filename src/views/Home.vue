@@ -15,7 +15,7 @@
                         <h2>{{content.h2}}</h2>
                         <div class="social-icons">
                             <a v-for="x in social" :href="x.url" target="_blank" rel="noopener">
-                                <span class="fa" :class="x.icon"></span>
+                                <span class="fa" aria-hidden :class="x.icon"></span>
                             </a>
                         </div>
 
@@ -29,7 +29,7 @@
             <div class="pure-g">
                 <div class="pure-u-1 pure-u-md-24-24">
                     <div class="home-btn-container">
-                        <router-link v-for="button in buttons" :to="{path: button.route}" tag="button" class="btn-home">{{button.text}}</router-link>
+                        <router-link v-for="button in buttons" :to="{path: button.route}" :aria-label="button.label" tag="button" class="btn-home">{{button.text}}</router-link>
                     </div>
                 </div>
             </div>
