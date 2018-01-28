@@ -1,6 +1,6 @@
 <template>
     <div>
-        <transition name="easeInOut">
+        <transition name="easeInOut" mode="out-in">
             <router-view id="main"></router-view>
         </transition>
     </div>

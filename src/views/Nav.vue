@@ -1,43 +1,33 @@
 <template>
-    <nav id="nav">
-        <div class="container">
-            <div class="row text-center form-horizontal">
-                <div class="col-sm-3">
-                    <div class="features-wraper">
+    <div class="pure-g">
+        <div class="pure-u-1-1 pure-u-md-24-24 pure-u-xs-24-24">
+            <nav class="nav pure-menu pure-menu-horizontal">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
                         <router-link to="/" active-class="active" exact>
-                            <span class="ion-home icon-set"></span>
-                            <h4>Home</h4> 
+                            Home
                         </router-link>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="features-wraper">
+                    </li>
+                    <li class="pure-menu-item">
                         <router-link to="/about" active-class="active" exact>
-                            <span class="ion-person icon-set"></span>
-                            <h4>About</h4>                        
-                        </router-link> 
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="features-wraper">
-                        
+                            About
+                        </router-link>
+                    </li>
+                    <li class="pure-menu-item">
                         <router-link to="/projects" active-class="active" exact>
-                            <span class="ion-briefcase icon-set"></span>
-                            <h4>Projects</h4>
+                            Projects
                         </router-link>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="features-wraper">
+                    </li>
+                    <li class="pure-menu-item">
                         <router-link to="/contact" active-class="active" exact>
-                            <span class="ion-email icon-set"></span>
-                            <h4>Contact me</h4>         
+                            Contact
                         </router-link>
-                    </div>
-                </div>
-            </div>
+                    </li>
+
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </div>
 </template>
 <script>
     export default {

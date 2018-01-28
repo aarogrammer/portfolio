@@ -1,7 +1,9 @@
 <template>
-    <header>
-        <main-nav></main-nav>
-    </header>
+    <div class="pure-g">
+        <header class="main-header">
+            <main-nav></main-nav>
+        </header>
+    </div>
 </template>
 <script>
     import Nav from './Nav.vue';
