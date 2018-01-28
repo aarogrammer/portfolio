@@ -63,7 +63,7 @@
              * @description AJAX call to bring in JSON data. Why am I doing it this way? Laziness probably. If I want to make a quick text change I don't want to have to transpile and deploy again.
              */
             getContent: function() {
-                this.$http.get( '/api/content.json')
+                this.$http.get('/api/content.json')
                 .then((res) => {
                     // Store returned object to variable. Easier to manage.
                     let obj         = res.data.content[0].about;

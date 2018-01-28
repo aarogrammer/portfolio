@@ -1,19 +1,13 @@
 <template>
     <div>
-        <section class="portfolio other-projects">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2>Recent projects</h2>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div v-for="project in projects">
-                        <div class="col-sm-4 portfolio-item">
+        <main-header></main-header>
+        <div class="pure-g">
+            <section class="projects">
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-8-24"  v-for="project in projects">
+                        <div class="portfolio-item">
                             <router-link :to="{path: '/projects/' + project.route}">
-                                <img :src="project.image" width="900" height="650" class="img-responsive" :alt="project.name" />
+                                <img :src="project.image" width="900" height="650" class="pure-img" :alt="project.name" />
                             </router-link>
                             <div class="overlay">
                                 <router-link :to="{path: '/projects/' + project.route}">
@@ -21,19 +15,21 @@
                                 </router-link>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 </template>
 
 <script>
+    import Header from './Header.vue';
     export default {
         mounted: function() {
             this.getProjects();
+        },
+        components: {
+            'main-header' : Header
         },
         data() {
             return {
@@ -42,7 +38,7 @@
         },
         methods : {
             getProjects: function() {
-                this.$http.get( '/api/projects.json')
+                this.$http.get('/api/projects.json')
                 .then((res) => {
                     this.projects = res.data.projects[0];
                 })
