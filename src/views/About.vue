@@ -64,16 +64,17 @@
              */
             getContent: function() {
                 this.$http.get( '/api/content.json')
-                    .then((res) => {
-                        // Store returned object to variable. Easier to manage.
-                        let obj         = res.data.content[0].about;
-                        this.content    = obj;
-                        this.buttons    = obj.button; // We could bring back the first item, but may require more buttons in the future so we will loop!
-                    })
-                    .catch((res) => {
-                            console.error(this.$http, `Err: ${ res }`);
-                        }
-                    );
+                .then((res) => {
+                    // Store returned object to variable. Easier to manage.
+                    let obj         = res.data.content[0].about;
+                    this.content    = obj;
+                    this.buttons    = obj.button; // We could bring back the first item, but may require more buttons in the future so we will loop!
+                    document.title  = `Aaron Welsh - ${this.content.title}`; // Set DOM title
+                })
+                .catch((res) => {
+                        console.error(this.$http, `Err: ${ res }`);
+                    }
+                );
             }
         }
     }

@@ -11,10 +11,12 @@
 body {
   background: #eee;
   box-sizing: border-box;
+  color: #525252;
 }
 h1, h2, h3 {
   font-family: Montserrat,Helvetica,Arial,sans-serif;
   letter-spacing: -.025em;
+  color: #525252;
 }
 h1 {
   font-size: 1.7em;
@@ -25,7 +27,7 @@ h2 {
 
 .fa {
   font-family: FontAwesome;
-  color: #333;
+  color: #525252;
 }
 .pure-g {
   display: block;
@@ -95,16 +97,12 @@ section.generic-page {
   box-sizing: content-box;
   box-shadow: 0 1px 5px #dcdcdc;
   padding: 2em;
-  /*margin: 2em auto;*/
-}
-section.about-me {
-  position: relative;
-  top: calc(200px - 50%);
 }
 section.about-me .about-left-info {
-  padding: 1em;
+  padding: 1em 0;
   position: relative;
 }
+
 section.about-me .about-left-info span.data {
   width: 80%;
   display: inline-block;
@@ -126,10 +124,10 @@ section.about-me .about-right-info p {
   font-size: 1.1em;
   line-height: 1.45em;
   letter-spacing: -.018em;
-  color: rgba(0,0,0,.8);
+  color: #525252;
 }
 section.about-me .about-right-info {
-  margin-top: 2em;
+  margin-top: 1.2em;
 }
 section.about-me .about-btn-container {
   margin: auto;
@@ -152,11 +150,27 @@ section.about-me .about-btn-container .btn-about {
   overflow:hidden;
   margin: 0em 1em 0.5em 0;
 }
+section.about-me .about-btn-container button.btn-about:hover {
+  background: #FFFFFF;
+  border: 2px solid #16a085;
+  color: #16a085;
+  padding: 0.55em 0em;
+}
+section.about-me .about-btn-container button.btn-about:after {
+  background-image:radial-gradient(circle, #16a085 10%,transparent 10.01%);
+}
 section.about-me .about-btn-container .btn-about:nth-of-type(2) {
   background: #FFFFFF;
   border: 2px solid #16a085;
   padding: 0.55em 0em;
   color: #16a085;
+}
+section.about-me .about-btn-container .btn-about:nth-of-type(2):hover {
+  background: #16a085;
+  color: #FFFFFF;
+}
+section.about-me .about-btn-container button.btn-about:nth-of-type(2):after {
+  background-image:radial-gradient(circle, #FFFFFF 10%,transparent 10.01%);
 }
 section.about-me .about-btn-container .btn-about:hover {
   transition: .3s all ease;
@@ -203,7 +217,7 @@ nav.nav .pure-menu-item a {
   font-weight: bold;
   font-size: 1em;
   padding-left: 1.5em;
-  color: rgba(0,0,0,.8);
+  color: #525252;
 }
 nav.nav .pure-menu-item a.active {
   color: #16a085;
@@ -218,6 +232,9 @@ header.header-home {
   height: 80vh;
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
   clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+}
+header.header-home h1, header.header-home h2 {
+  color: #ffffff;
 }
 header.header-home nav.main-nav {
   float: right;

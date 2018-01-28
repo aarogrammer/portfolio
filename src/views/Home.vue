@@ -62,6 +62,7 @@
                         this.content    = obj;
                         this.social     = obj.social;
                         this.buttons    = obj.button; // We could bring back the first item, but may require more buttons in the future so we will loop!
+                        document.title  = `Aaron Welsh - Portfolio`; // Set DOM title
                     })
                     .catch((res) => {
                         console.error(this.$http, `Err: ${ res }`);
