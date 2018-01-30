@@ -14,7 +14,7 @@
                         </router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link to="/projects" active-class="active" exact>
+                        <router-link to="/projects" active-class="active">
                             Projects
                         </router-link>
                     </li>
@@ -23,7 +23,6 @@
                             Contact
                         </router-link>
                     </li>
-
                 </ul>
             </nav>
         </div>

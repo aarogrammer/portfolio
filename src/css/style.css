@@ -24,7 +24,13 @@ h1 {
 h2 {
   font-size: 1.2em;
 }
-
+p {
+  padding-bottom: 1em;
+  font-size: 1.1em;
+  line-height: 1.45em;
+  letter-spacing: -.018em;
+  color: #525252;
+}
 .fa {
   font-family: FontAwesome;
   color: #525252;
@@ -137,7 +143,8 @@ section.about-me .about-btn-container .btn-about {
   min-width: 200px;
   width: auto;
   color: #FFFFFF;
-  padding: 0.6em 0em;
+  padding: 0.65em 0em;
+  border: 0;
   line-height: 1.45em;
   font-size: 1.25em;
   letter-spacing: -.008em;
@@ -350,32 +357,27 @@ section.main {
 }
 
 /* Projects Vue */
-section.projects {
-  margin-top: 40px;
-}
 
-section.projects .portfolio-item {
+section.projects .portfolio-item, section.other-projects .portfolio-item {
   position: relative;
-  /*height: 300px;*/
-  margin-bottom: 1em;
-  margin-right:1em;
+  margin: 0 0 1em 1em;
 }
-section.projects .portfolio-item h3{
+section.projects .portfolio-item h3, section.other-projects .portfolio-item h3 {
   color: #FFF;
 }
-section.projects .portfolio-item img:hover{
+section.projects .portfolio-item img:hover, section.other-projects .portfolio-item img:hover{
   opacity: 0.9;
 }
-section.projects .portfolio-item h4.last-item {
+section.projects .portfolio-item h4.last-item, section.other-projects .portfolio-item h4.last-item {
   font-size: 40px;
   padding-top: 50px;
   text-align: center;
 }
-section.projects .portfolio-item h4.last-item a:focus {
+section.projects .portfolio-item h4.last-item a:focus, section.other-projects .portfolio-item h4.last-item a:focus {
   color:#27ae60;
   text-decoration: none;
 }
-section.projects .overlay {
+section.projects .overlay, section.other-projects .overlay {
   font-weight: 900;
   position: absolute;
   width: 100%;
@@ -386,18 +388,70 @@ section.projects .overlay {
   transition: all 0.5s;
   color: #fff;
 }
-section.projects .overlay:hover {
+section.projects .overlay:hover, section.other-projects .overlay:hover {
   opacity: 1;
 }
-section.projects .overlay h3{
+section.projects .overlay h3, section.other-projects .overlay h3 {
   top: 50%;
   position: absolute;
   transform: translateY(-50%);
   text-align: center;
   width:100%;
 }
-section.projects .overlay a{
+section.projects .overlay a, section.other-projects .overlay a {
   display: block;
   color: #fff;
   text-decoration: none;
+}
+
+/* Client */
+section.client {
+
+}
+section.client .notice {
+  background: #eeeeee;
+  padding: 1em;
+  width: 84%;
+  margin-top: 1em;
+}
+section.client .client-left-info {
+  padding: 1em 0;
+  position: relative;
+}
+
+section.client .client-left-info span.data {
+  width: 80%;
+  display: inline-block;
+  margin-left: 10%;
+}
+
+section.client .client-left-info span.fa {
+  min-width: 32px;
+  font-size: 1.2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.client a {
+  color: #525252;
+  font-weight:bold;
+  text-decoration: none;
+}
+section.client .content-left {
+
+}
+section.client .content-left h1 {
+  margin:0;
+}
+section.client .copy-content {
+  padding: 2em;
+}
+
+/* Other projects component */
+section.other-projects {
+}
+section.other-projects h2 {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.5em;
 }

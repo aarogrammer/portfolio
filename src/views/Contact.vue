@@ -111,7 +111,7 @@
                     <div class="pure-u-1 pure-u-md-12-24">
                         <div class="right-content">
                             <h1>{{content.h1}}</h1>
-                            <div v-html="content.copy"></div>
+                            <p v-html="content.copy"></p>
                             <div class="contact-left-info">
                                 <a :href="'mailto:' + content.email">
                                     <span title="Email me" aria-hidden class="fa fa-envelope"></span>
@@ -126,7 +126,7 @@
                             </div>
 
                             <div class="social-icons">
-                                <a v-for="x in social" :key="x.url" :href="x.url" target="_blank" rel="noopener">
+                                <a v-for="x in social" :key="x.url" :href="x.url" target="_blank" rel="noopener noreferrer">
                                     <span class="fa" aria-hidden :class="x.icon"></span>
                                 </a>
                             </div>
@@ -269,7 +269,7 @@
 
                 // Prepare data to send
                 const data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message + "&token=" + tokenSend;
-                xhr.open("POST", cy.base_url + "/mail.php", true);
+                xhr.open("POST", this.base_url + "/mail.php", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.send(data);
                 xhr.onreadystatechange = display_data;

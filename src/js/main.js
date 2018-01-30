@@ -1,7 +1,7 @@
 /**
  * @name Main
  * @description File that webpack watches and outputs to bundle.js (see webpack.config.js)
- * @version 2.5
+ * @version 3.0
  * @since 2.0
  * @author Aaron Welsh <contact@aaron-welsh.co.uk>
  */
@@ -39,7 +39,7 @@ import Client from '../views/Client.vue';
 
 // Set up routes with relevant views/components
 const router = new VueRouter({
-    // mode: 'history',
+    mode: 'history',
     routes: [
         { path: '/', component: Home},
         { path: '/about', component: About},
@@ -51,7 +51,7 @@ const router = new VueRouter({
 
 // On new router load, scroll to top of the page.
 router.beforeEach((to, from, next) => {
-    window.scrollTo(0, 500);
+    window.scrollTo(0, 0);
     next();
 });
 

@@ -66,8 +66,8 @@
 
                 <h2>I would love for you to view my site...</h2>
 
-                <a class="btn btn-goback" href="http://www.enable-javascript.com/" target="_blank" rel="noopener">Find out how to enable JavaScript</a>
-                <a class="btn btn-goback" href="https://browsehappy.com/" target="_blank" rel="noopener">Learn about modern browsers</a>        
+                <a class="btn btn-goback" href="http://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">Find out how to enable JavaScript</a>
+                <a class="btn btn-goback" href="https://browsehappy.com/" target="_blank" rel="noopener noreferrer">Learn about modern browsers</a>
             </div>
         </div>
     </noscript>

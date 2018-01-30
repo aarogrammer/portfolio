@@ -41,14 +41,12 @@
 </template>
 <script>
     import Header from './Header.vue';
-    import Footer from './Footer.vue';
     export default {
         mounted: function() {
             this.getContent();
         },
         components: {
-            'main-header' : Header,
-            'main-footer' : Footer
+            'main-header' : Header
         },
         data () {
             return {

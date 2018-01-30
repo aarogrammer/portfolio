@@ -14,7 +14,7 @@
                         <h1>{{content.h1}}</h1>
                         <h2>{{content.h2}}</h2>
                         <div class="social-icons">
-                            <a v-for="x in social" :key="x.url" :href="x.url" target="_blank" rel="noopener">
+                            <a v-for="x in social" :key="x.url" :href="x.url" target="_blank" rel="noopener noreferrer">
                                 <span class="fa" aria-hidden :class="x.icon"></span>
                             </a>
                         </div>

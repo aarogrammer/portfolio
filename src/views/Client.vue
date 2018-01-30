@@ -10,89 +10,96 @@
         content: "\007C";
         padding: 0 0.5em
     }
-    .icon {
-        font-size: 30px;
-    }
     .project-template p a {
         text-decoration: underline;
     }
 </style>
 <template>
     <div>
-        <transition name="easeInOut">
-            <div>
-                <section class="project-template">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <router-link to="/projects" class="btn btn-goback">
-                                    Go back
-                                </router-link>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
-                                <div class="col-md-6">
-                                    <h2>{{name}}</h2>
-                                    <div>
-                                        Work: {{work}}
-                                    </div>
+        <main-header></main-header>
+        <div class="pure-g">
+            <section class="generic-page client">
+                <div class="pure-u-1">
+                    <div class="pure-g">
+                        <div class="pure-u-1 pure-u-md-12-24">
+                            <div class="content-left">
+                                <h1>{{name}}</h1>
+                                <div class="client-left-info" v-if="work">
+                                    <span class="fa fa-handshake-o" title="Type of work"></span>
+                                    <span class="data" v-html="work"></span>
+                                </div>
 
-                                    <div v-if="code">
-                                        <a :href="code"><span class="icon ion-social-github"></span></a>
-                                    </div>
+                                <div class="client-left-info" v-if="code">
+                                    <a rel="noopener noreferrer" :href="code"><span title="Code" class="fa fa-github"></span></a>
+                                    <span class="data">
+                                        <a rel="noopener noreferrer" :href="code">Code</a>
+                                    </span>
+                                </div>
 
-                                    <div v-if="demo">
-                                        <a :href="demo">Demo</a>
-                                    </div>
+                                <div class="client-left-info" v-if="demo">
+                                    <span title="Demo" class="fa fa-desktop"></span>
+                                    <span class="data">
+                                        <a rel="noopener noreferrer" :href="demo">Demo</a>
+                                    </span>
+                                </div>
 
-                                    <div v-if="screenshots">
+                                <div class="client-left-info" v-if="screenshots.length > 0">
+                                    <span class="fa fa-image"></span>
+                                    <span class="data">
                                         <div class="inline-div" v-for="screenshot, key in screenshots">
-                                            <a :href="screenshot.image">Screenshot {{++key}}</a>
+                                            <a target="_blank" aria-hidden rel="noopener noreferrer" :href="screenshot.image">Screenshot {{++key}}</a>
                                         </div>
-                                    </div>
-
-                                    <div>
-                                        Languages/Frameworks: {{stack}}
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <img :src="image" class="img-responsive" :alt="name + ' logo'" />
+                                    </span>
                                 </div>
 
-                                <div class="col-md-12 copy-content">
+                                <div class="client-left-info" v-if="stack">
+                                    <span class="fa fa-code" title="Code in use"></span>
+                                    <span class="data" v-html="stack"></span>
+                                </div>
+                                <div v-if="notice" class="notice">
+                                    <h3>Notice</h3>
+                                    <p v-html="notice"></p>
+                                </div>
 
-                                    <div v-if="notice">
-                                        <h3>Notice</h3>
-                                        <p class="breadcrumb" v-html="notice"></p>
-                                    </div>
+                            </div>
+                        </div>
 
-                                    <div v-if="description">
-                                        <h3>Development</h3>
-                                        <p v-html="description"></p>
-                                    </div>
+                        <div class="pure-u-1 pure-u-md-12-24">
+                            <div>
+                                <img :src="image" class="pure-img" :alt="name + ' logo'" />
+                            </div>
+                        </div>
+                        <div class="pure-u-1">
+                            <div class="copy-content">
+                                <div v-if="description">
+                                    <h3>Development</h3>
+                                    <p v-html="description"></p>
+                                </div>
 
-                                    <div v-if="testimonial">
-                                        <h3>Testimonial</h3>
-                                        <p v-html="testimonial" class="testimonial breadcrumb"></p>
-                                    </div>
-                                    <div v-if="conclusion">
-                                        <h3>Conclusion</h3>
-                                        <p v-html="conclusion"></p>
-                                    </div>
+                                <div v-if="testimonial">
+                                    <h3>Testimonial</h3>
+                                    <p v-html="testimonial" class="testimonial breadcrumb"></p>
+                                </div>
+                                <div v-if="conclusion">
+                                    <h3>Conclusion</h3>
+                                    <p v-html="conclusion"></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <other-projects></other-projects>
-            </div>
-        </transition>
+                </div>
+            </section>
+            <other-projects></other-projects>
+        </div>
     </div>
 </template>
 
 <script>
+    import Header from './Header.vue';
     import OtherProjects from './components/OtherProjects.vue';
     export default {
         components: {
+            'main-header' : Header,
             'other-projects': OtherProjects
         },
         mounted: function() {
@@ -123,7 +130,7 @@
                     this.projects = res.data.projects[0];
                     for(let prop in this.projects) {
                         if (this.projects.hasOwnProperty(prop)) {
-                            if(this.slug == this.projects[this.slug].route) {
+                            if(this.slug === this.projects[this.slug].route) {
                                 // Returned object for this route
                                 let obj = this.projects[this.slug];
 

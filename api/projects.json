@@ -34,8 +34,12 @@
         "code" : "",
         "screenshots" : [
           {
-            "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-home.jpg",
-            "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-service.jpg",
+            "image": "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-home.jpg"
+          },
+          {
+            "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-service.jpg"
+          },
+          {
             "image" : "https://static.aaron-welsh.co.uk/assets/img/gideonrobinson-contact.jpg"
           }
         ],
