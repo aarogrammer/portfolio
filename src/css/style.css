@@ -446,6 +446,9 @@ section.client .content-left h1 {
 section.client .copy-content {
   padding: 2em;
 }
+section.client .copy-content p {
+  font-size: 1.2em;
+}
 
 /* Other projects component */
 section.other-projects {

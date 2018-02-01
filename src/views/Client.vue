@@ -15,83 +15,85 @@
     }
 </style>
 <template>
-    <div>
-        <main-header></main-header>
-        <div class="pure-g">
-            <section class="generic-page client">
-                <div class="pure-u-1">
-                    <div class="pure-g">
-                        <div class="pure-u-1 pure-u-md-12-24">
-                            <div class="content-left">
-                                <h1>{{name}}</h1>
-                                <div class="client-left-info" v-if="work">
-                                    <span class="fa fa-handshake-o" title="Type of work"></span>
-                                    <span class="data" v-html="work"></span>
-                                </div>
+    <transition appear name="easeInOut" mode="out-in">
+        <div>
+            <main-header></main-header>
+            <div class="pure-g">
+                <section class="generic-page client">
+                    <div class="pure-u-1">
+                        <div class="pure-g">
+                            <div class="pure-u-1 pure-u-md-12-24">
+                                <div class="content-left">
+                                    <h1>{{name}}</h1>
+                                    <div class="client-left-info" v-if="work">
+                                        <span class="fa fa-handshake-o" title="Type of work"></span>
+                                        <span class="data" v-html="work"></span>
+                                    </div>
 
-                                <div class="client-left-info" v-if="code">
-                                    <a rel="noopener noreferrer" :href="code"><span title="Code" class="fa fa-github"></span></a>
-                                    <span class="data">
-                                        <a rel="noopener noreferrer" :href="code">Code</a>
-                                    </span>
-                                </div>
+                                    <div class="client-left-info" v-if="code">
+                                        <a rel="noopener noreferrer" :href="code"><span title="Code" class="fa fa-github"></span></a>
+                                        <span class="data">
+                                            <a rel="noopener noreferrer" :href="code">Code</a>
+                                        </span>
+                                    </div>
 
-                                <div class="client-left-info" v-if="demo">
-                                    <span title="Demo" class="fa fa-desktop"></span>
-                                    <span class="data">
-                                        <a rel="noopener noreferrer" :href="demo">Demo</a>
-                                    </span>
-                                </div>
+                                    <div class="client-left-info" v-if="demo">
+                                        <span title="Demo" class="fa fa-desktop"></span>
+                                        <span class="data">
+                                            <a rel="noopener noreferrer" :href="demo">Demo</a>
+                                        </span>
+                                    </div>
 
-                                <div class="client-left-info" v-if="screenshots.length > 0">
-                                    <span class="fa fa-image"></span>
-                                    <span class="data">
-                                        <div class="inline-div" v-for="screenshot, key in screenshots">
-                                            <a target="_blank" aria-hidden rel="noopener noreferrer" :href="screenshot.image">Screenshot {{++key}}</a>
-                                        </div>
-                                    </span>
-                                </div>
+                                    <div class="client-left-info" v-if="screenshots.length > 0">
+                                        <span class="fa fa-image"></span>
+                                        <span class="data">
+                                            <div class="inline-div" v-for="screenshot, key in screenshots">
+                                                <a target="_blank" aria-hidden rel="noopener noreferrer" :href="screenshot.image">Screenshot {{++key}}</a>
+                                            </div>
+                                        </span>
+                                    </div>
 
-                                <div class="client-left-info" v-if="stack">
-                                    <span class="fa fa-code" title="Code in use"></span>
-                                    <span class="data" v-html="stack"></span>
-                                </div>
-                                <div v-if="notice" class="notice">
-                                    <h3>Notice</h3>
-                                    <p v-html="notice"></p>
-                                </div>
+                                    <div class="client-left-info" v-if="stack">
+                                        <span class="fa fa-code" title="Code in use"></span>
+                                        <span class="data" v-html="stack"></span>
+                                    </div>
+                                    <div v-if="notice" class="notice">
+                                        <h3>Notice</h3>
+                                        <p v-html="notice"></p>
+                                    </div>
 
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="pure-u-1 pure-u-md-12-24">
-                            <div>
-                                <img :src="image" class="pure-img" :alt="name + ' logo'" />
+                            <div class="pure-u-1 pure-u-md-12-24">
+                                <div>
+                                    <img :src="image" class="pure-img" :alt="name + ' logo'" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="pure-u-1">
-                            <div class="copy-content">
-                                <div v-if="description">
-                                    <h3>Development</h3>
-                                    <p v-html="description"></p>
-                                </div>
+                            <div class="pure-u-1">
+                                <div class="copy-content">
+                                    <div v-if="description">
+                                        <h3>Development</h3>
+                                        <div v-html="description"></div>
+                                    </div>
 
-                                <div v-if="testimonial">
-                                    <h3>Testimonial</h3>
-                                    <p v-html="testimonial" class="testimonial breadcrumb"></p>
-                                </div>
-                                <div v-if="conclusion">
-                                    <h3>Conclusion</h3>
-                                    <p v-html="conclusion"></p>
+                                    <div v-if="testimonial">
+                                        <h3>Testimonial</h3>
+                                        <div v-html="testimonial" class="testimonial breadcrumb"></div>
+                                    </div>
+                                    <div v-if="conclusion">
+                                        <h3>Conclusion</h3>
+                                        <div v-html="conclusion"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <other-projects></other-projects>
+                </section>
+                <other-projects></other-projects>
+            </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -124,7 +126,7 @@
         },
         methods : {
             getProjects: function() {
-                this.$http.get( '/api/projects.json')
+                this.$http.get('/api/projects.json')
                 .then((res) => {
                     // Grab project object are loop through until matched route is found
                     this.projects = res.data.projects[0];

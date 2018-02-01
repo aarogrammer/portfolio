@@ -1,33 +1,5 @@
 <template>
     <div>
-        <!--<section class="other-projects">-->
-            <!--<div class="container">-->
-                <!--<div class="row">-->
-                    <!--<div class="col-lg-12 text-center">-->
-                        <!--<h2>Other projects</h2>-->
-                        <!--<div class="clear"></div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="row">-->
-
-                    <!--<div v-for="project in content.slice(0, 3)">-->
-                        <!--<div class="col-sm-4 portfolio-item">-->
-                            <!--<router-link v-on:click.native="projectClick(project)" :to="{path: '/projects/' + project.route + '/'}">-->
-                                <!--<img :src="project.image" width="900" height="650" class="img-responsive" :alt="project.name" />-->
-                            <!--</router-link>-->
-                            <!--<div class="overlay">-->
-                                <!--<router-link v-on:click.native="projectClick(project)" :to="{path: '/projects/' + project.route}">-->
-                                    <!--<h3>{{project.name}}</h3>-->
-                                <!--</router-link>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                    <!--</div>-->
-
-                <!--</div>-->
-            <!--</div>-->
-        <!--</section>-->
-
         <div class="pure-g">
             <section class="other-projects">
                 <div class="pure-g">
