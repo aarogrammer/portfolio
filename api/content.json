@@ -1,0 +1,78 @@
+{
+  "content" : [
+    {
+
+      "home" : {
+        "content" : "",
+        "image" : "https://scontent-lht6-1.cdninstagram.com/vp/56becb192f36bcbb55c915d47f3c5c54/5AE2342B/t51.2885-19/s320x320/18645161_1726768474282512_6312819622596837376_a.jpg",
+        "h1" : "Hello, my name is Aaron.",
+        "h2" : "I am Software Developer from Glasgow, Scotland.",
+        "social" : [
+          {
+            "icon" : "fa-github",
+            "url" : "https://github.com/aarogrammer"
+          },
+          {
+            "icon" : "fa-linkedin",
+            "url" : "https://www.linkedin.com/in/aaronwelsh505/"
+          },
+          {
+            "icon" : "fa-twitter",
+            "url" : "https://twitter.com/_aaronwelsh"
+          }
+        ],
+        "button" : [
+          {
+            "route" : "/about",
+            "text" : "Get to know me!",
+            "label" : "About Page"
+          }
+        ]
+      },
+      "about" : {
+        "title" : "About",
+        "h1" : "My name is Aaron.",
+        "location" : "Glasgow, Scotland",
+        "profession" : "Software Developer/Web Developer",
+        "education" : "First Class degree in BSc Hons Web and Mobile Development.",
+        "stack" : "PHP (LAMP stack), JavaScript (ES5/ES6, VueJS), Node.js (Express.js)",
+        "copy" : "<p>I am a software developer from Glasgow, Scotland who specialises in web applications. I have extensive experience with both frontend and backend development, which allows me to build and deploy powerful, beautiful applications.</p><p>I mostly develop in PHP and JavaScript and have many years using the LAMP stack (Linux, Apache, MySQL, PHP). I also love building applications using Node.js, VueJS and using that sweet ES6 (with cross platform support of course!). Often I dive in to new frameworks and stacks that the open source community come up with!</p>",
+        "button" : [
+          {
+            "route" : "/projects",
+            "text" : "Some of my projects",
+            "label" : "View my projects"
+          },
+          {
+            "route" : "/contact",
+            "text" : "Get in touch",
+            "label" : "Contact me"
+          }
+        ]
+      },
+      "contact" : {
+        "title" : "Contact",
+        "h1" : "Let's chat!",
+        "copy" : "Although I am not actively looking for freelance work at the moment, if you have an awesome project idea, I may be interested in helping out! You can feel free to contact me and I will try and respond ASAP.",
+        "tel" : "07449337037",
+        "email" : "contact@aaron-welsh.co.uk",
+        "social" : [
+          {
+            "icon" : "fa-github",
+            "url" : "https://github.com/aarogrammer"
+          },
+          {
+            "icon" : "fa-linkedin",
+            "url" : "https://www.linkedin.com/in/aaronwelsh505/"
+          },
+          {
+            "icon" : "fa-twitter",
+            "url" : "https://twitter.com/_aaronwelsh"
+          }
+        ]
+      }
+
+    }
+
+  ]
+}

@@ -1,13 +1,9 @@
 <?php 
 
-    /**
-    *   Description: This file is used on my LAMP server as the index file. index.html is used for development on Nodejs.
-    */
-
     session_start();
     // Generate random token
-    $true = true;
-    $_SESSION['token'] = openssl_random_pseudo_bytes(18, $true);
+    $crypto_strong = true;
+    $_SESSION['token'] = openssl_random_pseudo_bytes(18, $crypto_strong);
     // Encode token that is being sent
     $tokenToSend =  urlencode($_SESSION['token']);
 ?>
@@ -42,16 +38,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <![endif]-->
     <title>Aaron Welsh - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
-    
+
     <link rel="icon" href="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" type="image/ico" sizes="32x32" />
-    <!-- Sticking with Bootstrap 3.x for x-platform support -->
-    <link href="https://static.aaron-welsh.co.uk/assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://static.aaron-welsh.co.uk/assets/css/ionicons.min.css" rel="stylesheet" />
-    <link href="https://static.aaron-welsh.co.uk/assets/css/style.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700|Source+Sans+Pro" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/css/pure-min.css" />
+    <link rel="stylesheet" href="/src/css/base-min.css" />
+    <link rel="stylesheet" href="/src/css/grids-responsive-min.css" />
+    <link rel="stylesheet" href="/src/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
     <meta name="google-site-verification" content="5aenbty-INL73VaXROgbffu6GX1CDdaZXH-Y-IliC84" />
-    <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -67,9 +65,10 @@
                 <p>This doesn't mean that if you hire me your website will not be available to outdated browsers! This is just an extra fancy modern website.</p>
 
                 <h2>I would love for you to view my site...</h2>
-
-                <a class="btn btn-goback" href="http://www.enable-javascript.com/" target="_blank" rel="noopener">Find out how to enable JavaScript</a>
-                <a class="btn btn-goback" href="https://browsehappy.com/" target="_blank" rel="noopener">Learn about modern browsers</a>        
+                <div class="noscript-links">
+                    <a href="http://www.enable-javascript.com/" aria-label="Find out how to enable JavaScript" target="_blank" rel="noopener noreferrer">Find out how to enable JavaScript</a>
+                    <a href="https://browsehappy.com/" aria-label="Learn about modern browsers" target="_blank" rel="noopener noreferrer">Learn about modern, secure browsers</a>
+                </div>
             </div>
         </div>
     </noscript>
@@ -84,12 +83,7 @@
 
     </script>
     <input type="hidden" value="<?php echo $tokenToSend; ?>" id="token" />
-    <section id="app">
-        
-        
-    </section>
-    
-    
-    <script src="https://static.aaron-welsh.co.uk/assets/js/bundle.min.js"></script>
+    <section id="app"></section>
+    <script src="/dist/js/bundle.js"></script>
 </body>
 </html>
