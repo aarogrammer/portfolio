@@ -35,7 +35,7 @@
         "location" : "Glasgow, Scotland",
         "profession" : "Software Developer/Web Developer",
         "education" : "First Class degree in BSc Hons Web and Mobile Development.",
-        "stack" : "PHP (LAMP stack), JavaScript (ES5/ES6), Node.js, VueJS",
+        "stack" : "PHP (LAMP stack), JavaScript (ES5/ES6, VueJS), Node.js (Express.js)",
         "copy" : "<p>I am a software developer from Glasgow, Scotland who specialises in web applications. I have extensive experience with both frontend and backend development, which allows me to build and deploy powerful, beautiful applications.</p><p>I mostly develop in PHP and JavaScript and have many years using the LAMP stack (Linux, Apache, MySQL, PHP). I also love building applications using Node.js, VueJS and using that sweet ES6 (with cross platform support of course!). Often I dive in to new frameworks and stacks that the open source community come up with!</p>",
         "button" : [
           {

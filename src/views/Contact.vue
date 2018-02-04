@@ -58,7 +58,7 @@
         display: block;
     }
     section.contact .contact-left-info {
-        padding: 1em 0;
+        padding: 1em;
         position: relative;
     }
     section.contact .contact-left-info a {
@@ -86,8 +86,8 @@
     }
     section.contact .social-icons a .fa {
         color: #525252;
-        font-size: 2em;
-        margin-right: 1em;
+        font-size: 1.8em;
+        margin-right: 0.7em;
         -webkit-transition: color 0.3s ease;
         -moz-transition: color 0.3s ease;
         -ms-transition: color 0.3s ease;
@@ -111,7 +111,7 @@
                     <div class="pure-u-1 pure-u-md-12-24">
                         <div class="right-content">
                             <h1>{{content.h1}}</h1>
-                            <p v-html="content.copy"></p>
+                            <div v-html="content.copy"></div>
                             <div class="contact-left-info">
                                 <a :href="'mailto:' + content.email">
                                     <span title="Email me" aria-hidden class="fa fa-envelope"></span>
@@ -126,7 +126,7 @@
                             </div>
 
                             <div class="social-icons">
-                                <a v-for="x in social" :key="x.url" :href="x.url" target="_blank" rel="noopener noreferrer">
+                                <a v-for="x in social" :key="x.url" :href="x.url" target="_blank" rel="noopener">
                                     <span class="fa" aria-hidden :class="x.icon"></span>
                                 </a>
                             </div>
@@ -158,7 +158,7 @@
                                     <textarea @keyup="countCommentChars" v-model="query.comment" v-validate data-vv-rules="required|min:100" :class="{'input': true, 'is-danger': errors.has('message') }" rows="5" name="message" placeholder="Message" id="message"></textarea>
                                     <span v-show="errors.has('message')" class="help is-danger">The message field must be at least 100 characters <span v-if="query.commentAmount">/ {{query.commentAmount}} typed</span></span>
                                 </div>
-                                <button v-on:click="isButtonDisabled" v-bind:aria-disabled="query.commentAmount < minComment" v-bind:disabled="query.commentAmount < minComment" class="pure-button pure-input-1 contact-button">Send your message</button>
+                                <button v-bind:aria-disabled="query.commentAmount < minComment" v-bind:disabled="query.commentAmount < minComment" class="pure-button pure-input-1 contact-button">Send your message</button>
                                 <div v-show="this.buttonDisabled">
                                     test
                                 </div>
@@ -205,7 +205,7 @@
              * @description AJAX call to bring in JSON data. Why am I doing it this way? Laziness probably. If I want to make a quick text change I don't want to have to transpile and deploy again.
              */
             getContent: function() {
-                this.$http.get('/api/content.json')
+                this.$http.get( '/api/content.json')
                 .then((res) => {
                     // Store returned object to variable. Easier to manage.
                     let obj         = res.data.content[0].contact;
@@ -217,9 +217,6 @@
                         console.error(this.$http, `Err: ${ res }`);
                     }
                 );
-            },
-            isButtonDisabled: function() {
-               return 'hey'
             },
             /**
              * @name validateBeforeSubmit
@@ -269,7 +266,7 @@
 
                 // Prepare data to send
                 const data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message + "&token=" + tokenSend;
-                xhr.open("POST", this.base_url + "/mail.php", true);
+                xhr.open("POST", cy.base_url + "/mail.php", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.send(data);
                 xhr.onreadystatechange = display_data;

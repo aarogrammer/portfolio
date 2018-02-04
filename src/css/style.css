@@ -1,5 +1,3 @@
-/* New Dev 2018 - Merge in with below if needed */
-
 /* Defaults for every page */
 * {
   margin: 0;
@@ -40,7 +38,25 @@ p {
   margin: 0px auto;
   max-width: 1170px;
 }
-
+.noscript-links {
+  margin-top: 2em;
+}
+.noscript-links > a {
+  font-size: 1em;
+  color: #FFF;
+  font-weight: bold;
+  padding: 0.9em;
+  background: #16a085;
+  text-decoration: none;
+}
+.ns {
+  width: 70%;
+  display: block;
+  margin: auto;
+}
+.ns-content {
+  text-align: center;
+}
 /* Accessibility */
 a.skip-main {
   left: -999px;
@@ -74,30 +90,6 @@ a.skip-main:focus, a.skip-main:active {
 .easeInOut-enter, .easeInOut-leave-to  {
   opacity: 0;
 }
-.ns {
-  width: 70%;
-  display: block;
-  margin: auto;
-}
-@media (max-width: 767px) {
-  .ns {
-    width: 90%;
-  }
-}
-.ns-content {
-  text-align: center;
-}
-.ns-content h1{
-  font-size: 30px;
-}
-.ns-content p {
-  font-size: 17px;
-}
-.ns-content .btn {
-  margin-bottom: 20px;
-}
-
-
 section.generic-page {
   background: #ffffff;
   box-sizing: content-box;
@@ -360,7 +352,7 @@ section.main {
 
 section.projects .portfolio-item, section.other-projects .portfolio-item {
   position: relative;
-  margin: 0 0 1em 1em;
+  margin: 0.5em;
 }
 section.projects .portfolio-item h3, section.other-projects .portfolio-item h3 {
   color: #FFF;
@@ -457,4 +449,102 @@ section.other-projects h2 {
   text-align: center;
   padding: 1em;
   font-size: 1.5em;
+}
+
+.nav-toggle {
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  display: none;
+}
+
+.nav-toggle .bar {
+  background-color: #777;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+  position: absolute;
+  top: 18px;
+  right: 7px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav-toggle .bar:first-child {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
+
+.nav-toggle.x .bar {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav-toggle.x .bar:first-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* Mobile corrections */
+@media (max-width: 47.999em) {
+  html body .noscript-links > a {
+    display: block;
+    margin: 1em;
+  }
+
+  html body section.projects .portfolio-item, section.other-projects .portfolio-item {
+    margin: 1em;
+  }
+  html body section.generic-page {
+    /*width: 90%;*/
+  }
+  html body section.client .notice {
+    background: #eeeeee;
+    padding: 1em;
+    margin: 1em 0;
+    width: auto;
+  }
+
+  html body .nav-toggle {
+    display: block;
+  }
+
+  /* Some weird behavior happening here. In place to ensure menu comes back after close */
+  html body nav.nav{
+    display: none;
+  }
+
+  html body header.main-header {
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    transition: height .5s;
+  }
+  html body header.main-header.open {
+    height: 40vh;
+    max-height: 100vh;
+    background: #FFFFFF;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    transition: height .5s;
+  }
+  html body header.main-header.open nav.nav {
+    display: block;
+  }
+  nav.nav ul.pure-menu-list {
+    float: left;
+    line-height: 4em;
+  }
 }

@@ -65,9 +65,10 @@
                 <p>This doesn't mean that if you hire me your website will not be available to outdated browsers! This is just an extra fancy modern website.</p>
 
                 <h2>I would love for you to view my site...</h2>
-
-                <a class="btn btn-goback" href="http://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">Find out how to enable JavaScript</a>
-                <a class="btn btn-goback" href="https://browsehappy.com/" target="_blank" rel="noopener noreferrer">Learn about modern browsers</a>
+                <div class="noscript-links">
+                    <a href="http://www.enable-javascript.com/" aria-label="Find out how to enable JavaScript" target="_blank" rel="noopener noreferrer">Find out how to enable JavaScript</a>
+                    <a href="https://browsehappy.com/" aria-label="Learn about modern browsers" target="_blank" rel="noopener noreferrer">Learn about modern, secure browsers</a>
+                </div>
             </div>
         </div>
     </noscript>

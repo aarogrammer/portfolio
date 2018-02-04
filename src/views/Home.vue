@@ -1,6 +1,6 @@
 <template>
     <div v-if="content">
-        <router-link to="/about" class="skip-main">Skip to main content</router-link>
+        <router-link to="/about" class="skip-main">Skip to about me page</router-link>
         <header class="header-home">
             <div class="pure-g">
 

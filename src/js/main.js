@@ -36,6 +36,7 @@ import About from '../views/About.vue';
 import Project from '../views/Project.vue';
 import Contact from '../views/Contact.vue';
 import Client from '../views/Client.vue';
+// import nav from './nav.js';
 
 // Set up routes with relevant views/components
 const router = new VueRouter({
@@ -61,3 +62,9 @@ new Vue({
     router,
     render: h => h(app)
 });
+
+// Just a wee message to show people where they can find my source code.
+console.log(
+    '%cYou seem interested in how I made my portfolio... Nooice! View all the code on GitHub - https://github.com/aarogrammer/portfolio/',
+    'color: #16a085; font-size: 1.1em;'
+);
