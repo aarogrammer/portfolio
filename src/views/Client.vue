@@ -148,6 +148,7 @@
                                 this.screenshots = obj.screenshots;
                                 this.stack = obj.stack;
                                 this.testimonial = obj.testimonial;
+                                document.title  = `Aaron Welsh - Client - ${this.name}`; // Set DOM title
                             }
                         }
                     }

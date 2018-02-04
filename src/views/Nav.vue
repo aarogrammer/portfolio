@@ -9,7 +9,7 @@
                         </router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link v-on:click.native="closeMobileMenu" to="/about" active-class="active" exact>
+                        <router-link v-on:click.native="closeMobileMenu" to="/about" active-class="active">
                             About
                         </router-link>
                     </li>
@@ -19,7 +19,7 @@
                         </router-link>
                     </li>
                     <li class="pure-menu-item">
-                        <router-link v-on:click.native="closeMobileMenu" to="/contact" active-class="active" exact>
+                        <router-link v-on:click.native="closeMobileMenu" to="/contact" active-class="active">
                             Contact
                         </router-link>
                     </li>

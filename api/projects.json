@@ -1,4 +1,8 @@
 {
+  "content" : {
+    "title" : "Some of my projects",
+    "description" : "Below is a list of some projects that I have worked on. These will vary from freelance to my full time job/previous employment. I do not update this list as much as I should, so if you want more examples of my work, please get in contact!"
+  },
   "projects" : [
     {
       "cyonik" : {

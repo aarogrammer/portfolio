@@ -206,6 +206,7 @@ header.header-home {
   width: 100%;
   height: 80vh;
   clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+  -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
 }
 header.header-home h1, header.header-home h2 {
   color: #ffffff;
@@ -345,10 +346,24 @@ section.projects .overlay a, section.other-projects .overlay a {
   text-decoration: none;
 }
 
-/* Client */
-section.client {
-
+section.generic-page.projects {
+  margin: 0.5em;
 }
+
+section.notice {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border: 1px solid #faebcc;
+  padding: 1em;
+  margin: 0.5em;
+}
+section.notice .closeNotice {
+  float: right;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* Client */
 section.client .notice {
   background: #eeeeee;
   padding: 1em;

@@ -266,7 +266,7 @@
 
                 // Prepare data to send
                 const data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message + "&token=" + tokenSend;
-                xhr.open("POST", cy.base_url + "/mail.php", true);
+                xhr.open("POST", "/mail.php", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.send(data);
                 xhr.onreadystatechange = display_data;
@@ -278,7 +278,7 @@
                         }
                     }
                 }
-                document.getElementById("contactForm").reset();
+//                document.getElementById("contactForm").reset();
             }
         }
     }
