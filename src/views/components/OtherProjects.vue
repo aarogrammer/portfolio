@@ -57,7 +57,7 @@
                     let randomKey = keys[index];
 
                     // Check if item is already in the array, remove if so.
-                    if(arr.includes(obj[randomKey])) {
+                    if(arr.indexOf(obj[randomKey]) >= 0) {
                         let index = arr.indexOf(obj[randomKey]);
                         arr.splice(index, 1);
                     }
