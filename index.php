@@ -22,15 +22,15 @@
     <meta property="og:title" content="Aaron Welsh - Portfolio" />
     <meta property="og:site_name" content="aaron-welsh" />
     <meta property="og:url" content="https://aaron-welsh.co.uk" />
-    <meta property="og:description" content="Hi, my Name is Aaron Welsh. I am a Freelance Web Developer from Glasgow, Scotland." />
-    <meta property="og:image" content="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" />
+    <meta property="og:description" content="Software developer from Glasgow, Scotland." />
+    <meta property="og:image" content="https://static.aaron-welsh.co.uk/assets/img/18645161_1726768474282512_6312819622596837376_a.jpg" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:url" content="https://aaron-welsh.co.uk" />
     <meta name="twitter:title" content="Aaron Welsh - Portfolio" />
-    <meta name="twitter:description" content="Hi, my Name is Aaron Welsh. I am a Freelance Web Developer from Glasgow, Scotland." />
-    <meta name="twitter:image" content="https://static.aaron-welsh.co.uk/assets/img/favicon.ico" />
+    <meta name="twitter:description" content="Software developer from Glasgow, Scotland." />
+    <meta name="twitter:image" content="https://static.aaron-welsh.co.uk/assets/img/18645161_1726768474282512_6312819622596837376_a.jpg" />
     <meta name="twitter:site" content="_aaronwelsh" />
 
     <!--[if IE]>
