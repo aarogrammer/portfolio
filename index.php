@@ -14,10 +14,10 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//google-analytics.com" />
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Software developer from Glasgow, Scotland." />
     <meta name="author" content="Aaron Welsh" />
-    <meta name="theme-color" content="#3CB860" />
+    <meta name="theme-color" content="#16a085" />
 
     <meta property="og:title" content="Aaron Welsh - Portfolio" />
     <meta property="og:site_name" content="aaron-welsh" />
