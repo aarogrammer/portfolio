@@ -15,8 +15,7 @@
     <link rel="dns-prefetch" href="//google-analytics.com" />
     <link rel="dns-prefetch" href="//www.google-analytics.com" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Hi, my Name is Aaron Welsh. I am a Freelance Web Developer from Glasgow, Scotland." />
-    <meta name="keywords" content="Web Developer, Web Developer Glasgow, Web Developer Scotland, Web Design, Web Design Glasgow, Aaron Welsh, aarogrammer" />
+    <meta name="description" content="Software developer from Glasgow, Scotland." />
     <meta name="author" content="Aaron Welsh" />
     <meta name="theme-color" content="#3CB860" />
 
