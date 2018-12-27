@@ -13,7 +13,7 @@
             </section>
             <section class="projects">
                 <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-8-24"  v-for="project in projects">
+                    <div class="pure-u-1 pure-u-md-8-24" v-for="project in projects">
                         <div class="portfolio-item">
                             <router-link :to="{path: '/projects/' + project.route}">
                                 <img :src="project.image" width="900" height="650" class="pure-img" :alt="project.name" />
@@ -50,21 +50,20 @@
             }
         },
         methods : {
-            getProjects: function() {
-                this.$http.get('/api/projects.json')
-                .then((res) => {
-                    this.projects   = res.data.projects[0];
-                    this.content    = res.data.content;
-                    document.title  = `Aaron Welsh - Projects`; // Set DOM title
-                })
-                .catch((res) => {
-                    console.error(this.$http, `Err: ${ res }`);
-                });
+            getProjects: async function() {
+                try {
+                    const request = await this.$http.get('/api/projects');
+                    this.projects   = request.data.projects[0];
+                    this.content    = request.data.content;
+                    document.title  = 'Aaron Welsh - Projects'; // Set DOM title
+                } catch (err) {
+                    console.error({
+                        message: 'Something went wrong.',
+                        errMsg: err
+                    });     
+                }
             },
-
-            /**
-             * Close the notice message and hide it for 30 days.
-             */
+            //Close the notice message and hide it for 30 days.
             closeNotice: function () {
                 document.querySelector('.notice').style.display = 'none';
                 const date = new Date;
