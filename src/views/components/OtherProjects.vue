@@ -6,7 +6,7 @@
                     <div class="pure-u-1">
                         <h2>Other projects</h2>
                     </div>
-                    <div class="pure-u-1 pure-u-md-8-24" v-for="project in content.slice(0, 3)">
+                    <div class="pure-u-1 pure-u-md-8-24" v-for="project in content.slice(0, 3)" v-bind:key="project.name">
                         <div class="portfolio-item">
                             <router-link v-on:click.native="projectClick(project)" :to="{path: '/projects/' + project.route + '/'}">
                                 <img :src="project.image" width="900" height="650" class="pure-img" :alt="project.name" />
@@ -36,15 +36,14 @@
             }
         },
         methods : {
-            getProjects: function() {
-                this.$http.get( '/api/projects.json')
-                .then((res) => {
-                    this.projects = res.data.projects[0];
+            getProjects: async function() {
+                try {
+                    const projectsData = await this.$http.get( '/api/projects');
+                    this.projects = projectsData.data.projects[0];
                     this.shuffle(this.projects);
-                })
-                .catch((res) => {
-                    console.error(this.$http, `Err: ${ res }`);
-                });
+                } catch (err) {
+                    console.error(this.$http, `Err: ${ err }`);                    
+                }
             },
             shuffle: function(obj) {
                 let arr = [];

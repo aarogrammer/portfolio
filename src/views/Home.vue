@@ -54,20 +54,17 @@
              * @since 3.0
              * @description AJAX call to bring in JSON data. Why am I doing it this way? Laziness probably. If I want to make a quick text change I don't want to have to transpile and deploy again.
              */
-            getContent: function() {
-                this.$http.get('/api/content.json')
-                    .then((res) => {
-                        // Store returned object to variable. Easier to manage.
-                        let obj         = res.data.content[0].home;
-                        this.content    = obj;
-                        this.social     = obj.social;
-                        this.buttons    = obj.button; // We could bring back the first item, but may require more buttons in the future so we will loop!
-                        document.title  = `Aaron Welsh - Portfolio`; // Set DOM title
-                    })
-                    .catch((res) => {
-                        console.error(this.$http, `Err: ${ res }`);
-                    }
-                );
+            getContent: async function() {
+                try {
+                    const contentData = await this.$http.get('/api/content');
+                    let content         = contentData.data.content[0].home;
+                    this.content    = content;
+                    this.social     = content.social;
+                    this.buttons    = content.button; // We could bring back the first item, but may require more buttons in the future so we will loop!
+                    document.title  = `Aaron Welsh - Portfolio`; // Set DOM title
+                } catch (err) {
+                    console.error(this.$http, `Err: ${ err }`);                    
+                }
             }
         }
     }

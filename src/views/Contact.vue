@@ -101,7 +101,6 @@
         cursor: not-allowed!important;
     }
 </style>
-
 <template>
     <div>
         <main-header></main-header>
@@ -124,7 +123,6 @@
                                     <span class="data">{{content.tel}}</span>
                                 </a>
                             </div>
-
                             <div class="social-icons">
                                 <a v-for="x in social" :key="x.url" :href="x.url" target="_blank" rel="noopener">
                                     <span class="fa" aria-hidden :class="x.icon"></span>
@@ -139,9 +137,6 @@
                                     <input v-validate data-vv-rules="required|min:3" :class="{'input': true, 'is-danger': errors.has('name') }" name="name" placeholder="Name" id="name" />
                                     <span v-show="errors.has('name')" class="help is-danger">{{ errors.first('name') }}</span>
                                 </div>
-
-
-
                                 <div class="contact-fields joined">
                                     <div class="pure-g">
                                         <div class="pure-u-1 pure-u-md-12-24">
@@ -204,19 +199,16 @@
              * @since 3.0
              * @description AJAX call to bring in JSON data. Why am I doing it this way? Laziness probably. If I want to make a quick text change I don't want to have to transpile and deploy again.
              */
-            getContent: function() {
-                this.$http.get( '/api/content.json')
-                .then((res) => {
-                    // Store returned object to variable. Easier to manage.
-                    let obj         = res.data.content[0].contact;
-                    this.content    = obj;
-                    this.social     = obj.social;
+            getContent: async function() {
+                try {
+                    const contentData = await this.$http.get( '/api/content');
+                    const contactData = contentData.data.content[0].contact;
+                    this.content    = contactData;
+                    this.social     = contactData.social;
                     document.title  = `Aaron Welsh - ${this.content.title}`; // Set DOM title
-                 })
-                .catch((res) => {
-                        console.error(this.$http, `Err: ${ res }`);
-                    }
-                );
+                } catch (err) {
+                    console.error(this.$http, `Err: ${ err }`);                    
+                }
             },
             /**
              * @name validateBeforeSubmit
@@ -253,8 +245,6 @@
                 const number    = document.getElementById("number").value;
                 const message   = document.getElementById("message").value;
 
-                const tokenSend = document.getElementById("token").value;
-
                 // Create our xhr object
                 let xhr;
                 if (window.XMLHttpRequest) {
@@ -265,7 +255,7 @@
                 }
 
                 // Prepare data to send
-                const data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message + "&token=" + tokenSend;
+                const data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message;
                 xhr.open("POST", "/mail.php", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.send(data);
@@ -278,7 +268,7 @@
                         }
                     }
                 }
-//                document.getElementById("contactForm").reset();
+               document.getElementById("contactForm").reset();
             }
         }
     }

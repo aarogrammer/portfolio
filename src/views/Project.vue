@@ -13,7 +13,7 @@
             </section>
             <section class="projects">
                 <div class="pure-g">
-                    <div class="pure-u-1 pure-u-md-8-24" v-for="project in projects">
+                    <div class="pure-u-1 pure-u-md-8-24" v-for="project in projects" v-bind:key="project.name">
                         <div class="portfolio-item">
                             <router-link :to="{path: '/projects/' + project.route}">
                                 <img :src="project.image" width="900" height="650" class="pure-img" :alt="project.name" />
@@ -52,9 +52,9 @@
         methods : {
             getProjects: async function() {
                 try {
-                    const request = await this.$http.get('/api/projects');
-                    this.projects   = request.data.projects[0];
-                    this.content    = request.data.content;
+                    const projectsData = await this.$http.get('/api/projects');
+                    this.projects   = projectsData.data.projects[0];
+                    this.content    = projectsData.data.content;
                     document.title  = 'Aaron Welsh - Projects'; // Set DOM title
                 } catch (err) {
                     console.error({
