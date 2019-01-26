@@ -3,27 +3,24 @@ const state = {
 };
 
 const mutations = {
-    updateProject: ( state, value ) => {
+    updateProject: (context, value) => {
         state.project = value;
     }
 };
 
 const actions = {
     updateProject: (context, value) => {
-        context.commit('updateProject', value)
+        context.commit('updateProject', value);
     }
 };
 
 const getters = {
-    getProject: (state) => {
-        return state.project;
-    }
+    getProject: () => state.project
 };
-
 
 export default {
     state,
     actions,
     getters,
     mutations
-}
+};

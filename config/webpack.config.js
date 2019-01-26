@@ -7,7 +7,9 @@
  */
 
 const webpack = require('webpack');
+
 const env = require('./env');
+
 module.exports = {
     entry: '../src/js/main.js',
     output: {
@@ -53,5 +55,5 @@ if (env.mode === 'production') {
         new webpack.LoaderOptionsPlugin({
             minimize: true
         })
-    ])
+    ]);
 }

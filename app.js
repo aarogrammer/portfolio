@@ -3,16 +3,18 @@ const path = require('path');
 const Mailgun = require('mailgun-js');
 const bodyParser = require('body-parser');
 
-const { 
+const {
     mailGunAPIKey,
     port,
     mailGunDomain
 } = require('./config/env');
+
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('dist'));
 app.use(express.static('src'));
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
@@ -33,7 +35,7 @@ app.post('/sendmail', async (req, res) => {
             number,
             message
         } = req.body;
-        const mailgun = new Mailgun({apiKey: mailGunAPIKey, domain: mailGunDomain});
+        const mailgun = new Mailgun({ apiKey: mailGunAPIKey, domain: mailGunDomain });
         const data = {
             from: 'Portfolio <contact@aaron-welsh.co.uk>',
             to: 'contact@aaron-welsh.co.uk',

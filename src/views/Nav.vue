@@ -79,7 +79,6 @@
                     document.getElementById('toggle').addEventListener('click', function (e) {
                         toggleMenu();
                         e.preventDefault();
-                        console.log('working fine')
                     });
 
                     document.addEventListener(WINDOW_CHANGE_EVENT, closeMenu);
