@@ -125,17 +125,16 @@
             }
         },
         methods : {
-            getProjects: function() {
-                this.$http.get('/api/projects.json')
-                .then((res) => {
+            getProjects: async function() {
+                try {
+                    const request = await this.$http.get('/api/projects')
                     // Grab project object are loop through until matched route is found
-                    this.projects = res.data.projects[0];
+                    this.projects = request.data.projects[0];
                     for(let prop in this.projects) {
                         if (this.projects.hasOwnProperty(prop)) {
                             if(this.slug === this.projects[this.slug].route) {
                                 // Returned object for this route
-                                let obj = this.projects[this.slug];
-
+                                const obj = this.projects[this.slug];
                                 // Data to be outputted
                                 this.name = obj.name;
                                 this.image = obj.image;
@@ -152,10 +151,12 @@
                             }
                         }
                     }
-                })
-                .catch((res) => {
-                    console.error(`Err: ${ res }`);
-                });
+                } catch (err) {
+                    console.error({
+                        message: 'Something went wrong.',
+                        errMsg: err
+                    });
+                }
             }
         },
         computed: {
@@ -164,8 +165,9 @@
             }
         },
         watch: {
-            'project': function() {
+            project: function() {
                 this.name = this.project.name;
+                document.title  = `Aaron Welsh - Client - ${this.name}`;
                 this.image = this.project.image;
                 this.description = this.project.description;
                 this.conclusion = this.project.conclusion;

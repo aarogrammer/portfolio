@@ -30,13 +30,12 @@ Vue.use(VeeValidate);
 // Main app import
 import app from '../views/App.vue';
 
-// Views (parents)
 import Home from '../views/Home.vue';
 import About from '../views/About.vue';
 import Project from '../views/Project.vue';
 import Contact from '../views/Contact.vue';
 import Client from '../views/Client.vue';
-// import nav from './nav.js';
+import NotFound from '../views/NotFound.vue';
 
 // Set up routes with relevant views/components
 const router = new VueRouter({
@@ -46,7 +45,8 @@ const router = new VueRouter({
         { path: '/about', component: About},
         { path: '/projects', component: Project},
         { path: '/contact', component: Contact},
-        { path: '/projects/:client', component: Client}
+        { path: '/projects/:client', component: Client},
+        { path: '*', component: NotFound }
     ]
 });
 
@@ -60,7 +60,7 @@ new Vue({
     el: '#app',
     store: require('./store/store').default,
     router,
-    render: h => h(app)
+    render: (h) => h(app)
 });
 
 // Just a wee message to show people where they can find my source code.

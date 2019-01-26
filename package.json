@@ -1,11 +1,14 @@
 {
   "name": "portfolio",
   "version": "2.0.0",
-  "author": "Aaron",
+  "description": "My portfolio.",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.16.2",
+    "body-parser": "^1.18.3",
     "es6-promise": "^4.1.1",
+    "express": "^4.16.3",
+    "mailgun-js": "^0.22.0",
     "vee-validate": "^2.0.0-beta.17",
     "vue": "2.4.2",
     "vue-router": "^2.7.0",
@@ -24,7 +27,9 @@
     "webpack": "^3.5.4"
   },
   "scripts": {
-    "build": "cd build && webpack -w"
+    "build": "cd config && webpack --config ../config/webpack.config.js -w",
+    "dev": "nodemon -L app",
+    "start": "node app"
   },
   "repository": {
     "type": "git",

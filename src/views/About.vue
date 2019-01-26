@@ -58,21 +58,20 @@
             /**
              * @name getContent
              * @since 3.0
-             * @description AJAX call to bring in JSON data. Why am I doing it this way? Laziness probably. If I want to make a quick text change I don't want to have to transpile and deploy again.
+             * @description AJAX call to bring in about content. 
              */
-            getContent: function() {
-                this.$http.get('/api/content.json')
-                .then((res) => {
-                    // Store returned object to variable. Easier to manage.
-                    let obj         = res.data.content[0].about;
-                    this.content    = obj;
-                    this.buttons    = obj.button; // We could bring back the first item, but may require more buttons in the future so we will loop!
-                    document.title  = `Aaron Welsh - ${this.content.title}`; // Set DOM title
-                })
-                .catch((res) => {
-                        console.error(this.$http, `Err: ${ res }`);
-                    }
-                );
+            getContent: async function() {
+                try {
+                    const content = await this.$http.get('/api/content');
+                    this.content = content.data.content[0].about;
+                    this.buttons = this.content.button;
+                    document.title = `Aaron Welsh - ${this.content.title}`; // Set DOM title
+                } catch (err) {
+                    console.error({
+                        message: 'Something went wrong.',
+                        errMsg: err
+                    });                    
+                }
             }
         }
     }
