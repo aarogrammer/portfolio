@@ -268,12 +268,11 @@
                         if (xhr.status === 200) {
                             const response = JSON.parse(xhr.responseText);
                             document.getElementById("success").innerHTML = response.message;
-                            
                             document.getElementById("success").style.display = 'block';
                         }
                     }
                 }
-            //    document.getElementById("contactForm").reset();
+               document.getElementById("contactForm").reset();
             }
         }
     }

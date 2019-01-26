@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "2.0.0",
-  "author": "Aaron",
+  "description": "My portfolio.",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.16.2",
@@ -27,8 +27,9 @@
     "webpack": "^3.5.4"
   },
   "scripts": {
-    "build": "cd build && webpack --config ../config/webpack.config.js -w",
-    "dev": "nodemon -L app"
+    "build": "cd config && webpack --config ../config/webpack.config.js -w",
+    "dev": "nodemon -L app",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
