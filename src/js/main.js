@@ -5,27 +5,13 @@
  * @since 2.0
  * @author Aaron Welsh <contact@aaron-welsh.co.uk>
  */
-
 // Import Vue and Vue Loader
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Vuex from 'vuex';
 import Es6Promise from 'es6-promise';
 import Axios from 'axios';
-
-const axios = Axios.create({
-    baseURL: '/',
-});
-
-Vue.prototype.$http = axios;
-
-Es6Promise.polyfill();
-Vue.use(VueRouter);
-Vue.use(Vuex);
-
-// Import vee-validate for form validation on the client side
 import VeeValidate from 'vee-validate';
-Vue.use(VeeValidate);
 
 // Main app import
 import app from '../views/App.vue';
@@ -37,15 +23,28 @@ import Contact from '../views/Contact.vue';
 import Client from '../views/Client.vue';
 import NotFound from '../views/NotFound.vue';
 
+const axios = Axios.create({
+    baseURL: '/',
+});
+
+Vue.prototype.$http = axios;
+
+Es6Promise.polyfill();
+Vue.use(VueRouter);
+Vue.use(Vuex);
+Vue.use(VeeValidate);
+
+const store = require('./store/store').default;
+
 // Set up routes with relevant views/components
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/', component: Home},
-        { path: '/about', component: About},
-        { path: '/projects', component: Project},
-        { path: '/contact', component: Contact},
-        { path: '/projects/:client', component: Client},
+        { path: '/', component: Home },
+        { path: '/about', component: About },
+        { path: '/projects', component: Project },
+        { path: '/contact', component: Contact },
+        { path: '/projects/:client', component: Client },
         { path: '*', component: NotFound }
     ]
 });
@@ -56,13 +55,16 @@ router.beforeEach((to, from, next) => {
     next();
 });
 
-new Vue({
-    el: '#app',
-    store: require('./store/store').default,
-    router,
-    render: (h) => h(app)
-});
-
+const startVue = () => {
+    const vue = new Vue({
+        el: '#app',
+        store,
+        router,
+        render: h => h(app)
+    });
+    return vue;
+};
+startVue();
 // Just a wee message to show people where they can find my source code.
 console.log(
     '%cYou seem interested in how I made my portfolio... Nooice! View all the code on GitHub - https://github.com/aarogrammer/portfolio/',
