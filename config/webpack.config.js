@@ -7,7 +7,7 @@
  */
 
 const webpack = require('webpack');
-const env = require('./env.json');
+const env = require('./env');
 module.exports = {
     entry: '../src/js/main.js',
     output: {
@@ -36,7 +36,7 @@ module.exports = {
         }
     }
 };
-if (env.app.mode === 'production') {
+if (env.mode === 'production') {
     module.exports.devtool = '#source-map';
     module.exports.plugins = (module.exports.plugins || []).concat([
         new webpack.DefinePlugin({

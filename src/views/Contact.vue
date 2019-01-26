@@ -52,6 +52,8 @@
         color: #3c763d;
         background-color: #dff0d8;
         border-color: #d6e9c6;
+        padding: 1em;
+        display: none;
     }
     section.contact div#success span {
         padding: 1em;
@@ -256,7 +258,7 @@
 
                 // Prepare data to send
                 const data = "name=" + name + "&email=" + email + "&number=" + number + "&message=" + message;
-                xhr.open("POST", "/mail.php", true);
+                xhr.open("POST", "/sendmail", true);
                 xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                 xhr.send(data);
                 xhr.onreadystatechange = display_data;
@@ -264,11 +266,14 @@
                 function display_data() {
                     if (xhr.readyState === 4) {
                         if (xhr.status === 200) {
-                            document.getElementById("success").innerHTML = xhr.responseText;
+                            const response = JSON.parse(xhr.responseText);
+                            document.getElementById("success").innerHTML = response.message;
+                            
+                            document.getElementById("success").style.display = 'block';
                         }
                     }
                 }
-               document.getElementById("contactForm").reset();
+            //    document.getElementById("contactForm").reset();
             }
         }
     }
