@@ -1,6 +1,6 @@
 <template>
     <div v-if="content">
-        <!-- <main-header></main-header> -->
+        <main-header></main-header>
         <div class="pure-g">
             <section class="generic-page about-me">
                 <div class="pure-u-1 pure-u-md-2-5">
@@ -76,14 +76,15 @@
     </div>
 </template>
 <script>
-    // import Header from './Header.vue';
+    import Header from '../components/Header.vue';
+
     export default {
         mounted() {
             this.getContent();
         },
-        // components: {
-        //     'main-header' : Header
-        // },
+        components: {
+            'main-header': Header
+        },
         data() {
             return {
                 content: null,
