@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - '*'
+      - '*/*'
+      - '**'
       - '!master'
 name: audit_lint_test
 jobs:
