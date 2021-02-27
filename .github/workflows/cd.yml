@@ -35,7 +35,7 @@ jobs:
     - run: |
         docker build \
           -t portfolio .
-        docker tag portfolio registry.digitalocean.com/awelsh/portfolio::${{ github.sha }}
+        docker tag portfolio registry.digitalocean.com/awelsh/portfolio:${{ github.sha }}
 
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
