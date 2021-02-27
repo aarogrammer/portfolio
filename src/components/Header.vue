@@ -8,9 +8,10 @@
 </template>
 <script>
 import Nav from './Nav.vue';
+
 export default {
     components: {
-        'main-nav' : Nav
+        'main-nav': Nav
     }
-}
+};
 </script>
