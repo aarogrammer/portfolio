@@ -32,7 +32,6 @@ jobs:
     - name: Checkout master
       uses: actions/checkout@master
 
-    - name: Build container image
     - run: |
         docker build \
           -t portfolio .
