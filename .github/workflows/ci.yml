@@ -1,30 +1,30 @@
-# # Flow to audit, lint and test each commit, but not to master.
-# # Master CI will be within the CD flow.
-# on:
-#   push:
-#     branches:
-#       - '*'
-#       - '*/*'
-#       - '**'
-#       - '!master'
-# name: audit_lint_test
-# jobs:
-#   audit_lint_test:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v2
-#     - uses: actions/setup-node@v2
-#       with:
-#         node-version: '14'
-#     - name: Install dependencies
-#       run: |
-#         npm i
-#     - name: Run audit
-#       run: |
-#         npm audit
-#     - name: Run linter
-#       run: |
-#         npm run lint
-#     - name: Run build
-#       run: |
-#         npm run build
+# Flow to audit, lint and test each commit, but not to master.
+# Master CI will be within the CD flow.
+on:
+  push:
+    branches:
+      - '*'
+      - '*/*'
+      - '**'
+      - '!master'
+name: audit_lint_test
+jobs:
+  audit_lint_test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Install dependencies
+      run: |
+        npm i
+    - name: Run audit
+      run: |
+        npm audit
+    - name: Run linter
+      run: |
+        npm run lint
+    - name: Run build
+      run: |
+        npm run build
