@@ -73,6 +73,7 @@
                 this.content = content;
                 this.social = social;
                 this.buttons = buttons;
+                document.title = 'Aaron Welsh - Portfolio'; // Set DOM title
             }
         }
     };

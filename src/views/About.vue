@@ -79,8 +79,8 @@
     import Header from '../components/Header.vue';
 
     export default {
-        mounted() {
-            this.getContent();
+        async mounted() {
+            await this.getContent();
         },
         components: {
             'main-header': Header

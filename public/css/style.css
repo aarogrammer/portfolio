@@ -92,16 +92,14 @@ a.skip-main:focus, a.skip-main:active {
     font-size: 1.2em;
     z-index: 999;
 }
-.fade-enter-active, .fade-leave-active {
-    transition-property: opacity;
-    transition-duration: 10s;
-}
-
-.fade-enter-active {
-    transition-delay: .10s;
-}
-.fade-enter, .fade-leave-active {
-    opacity: 0
+.easeInOut-enter-active, .easeInOut-leave-active {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+  }
+.easeInOut-enter, .easeInOut-leave-to  {
+    opacity: 0;
 }
 section.generic-page {
     background: #ffffff;
