@@ -33,7 +33,10 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build container image
-      run: docker build -t registry.digitalocean.com/awelsh/portfolio::${{ github.sha }} .
+    - run: |
+        docker build \
+          -t portfolio .
+        docker tag portfolio registry.digitalocean.com/awelsh/portfolio::${{ github.sha }} .
 
     - name: Install doctl
       uses: digitalocean/action-doctl@v2
