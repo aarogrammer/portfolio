@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: portfolio
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portfolio
+  template:
+    metadata:
+      labels:
+        release: production
+        app: portfolio
+        tier: frontend
+    spec: 
+      containers:
+        - name: portfolio
+          image: registry.digitalocean.com/awelsh/portfolio:${{ github.sha }}
+          resources:
+            limits:
+              cpu: 50m
+              memory: 300M
+            requests:
+              cpu: 10m
+              memory: 100M
