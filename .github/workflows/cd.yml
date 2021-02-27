@@ -48,17 +48,14 @@ jobs:
     - name: Push image to DigitalOcean Container Registry
       run: docker push registry.digitalocean.com/awelsh/portfolio:${{ github.sha }}
 
-    - name: Installing gettext to access envsubst to replace values.
-      run: sudo apt-get install gettext
-
-    - name: Replace GH SHA variable with SHA value.
-      run: envsubst < $GITHUB_WORKSPACE/deployments/deployment/production.yml > $GITHUB_WORKSPACE/deployments/deployment/patched_portfolio.yml
+    - name: Update deployment file
+      run: TAG=$(echo $GITHUB_SHA) && sed -i 's|<IMAGE>|registry.digitalocean.com/awelsh/portfolio:'${TAG}'|' $GITHUB_WORKSPACE/deployments/deployment/production.yml
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 awelsh-main-cluster
 
     - name: Deploy to DigitalOcean Kubernetes
-      run: kubectl apply -f $GITHUB_WORKSPACE/deployments/deployment/patched_portfolio.yml
+      run: kubectl apply -f $GITHUB_WORKSPACE/deployments/deployment/produciton.yml
 
     - name: Verify deployment
       run: kubectl rollout status deployment/portfolio
