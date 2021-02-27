@@ -1,5 +1,6 @@
 <template>
     <div v-if="content">
+        <router-link to="/" class="skip-main">Go back to home page.</router-link>
         <main-header></main-header>
         <div class="pure-g">
             <section class="generic-page about-me">

@@ -42,8 +42,15 @@
                         :aria-label="button.label"
                         tag="button"
                         class="btn-home"
+                        @mouseover="handleButtonHover(
+                            true,
+                            button.hover.enabled ? button.hover.text : button.text
+                        )"
+                        @mouseleave="handleButtonHover(false, button.text)"
                     >
-                        {{button.text}}</router-link>
+                        <span v-if="buttonMessage">{{ buttonMessage }}</span>
+                        <span v-else>{{ button.text }}</span>
+                    </router-link>
                     </div>
                 </div>
             </div>
@@ -58,11 +65,18 @@
             return {
                 content: null,
                 social: null,
-                buttons: null
+                buttons: null,
+                hover: false,
+                hoverMessage: null
             };
         },
         async mounted() {
             await this.getHomeContent();
+        },
+        computed: {
+            buttonMessage() {
+                return this.hoverMessage;
+            }
         },
         methods: {
             async getHomeContent() {
@@ -74,6 +88,10 @@
                 this.social = social;
                 this.buttons = buttons;
                 document.title = 'Aaron Welsh - Portfolio'; // Set DOM title
+            },
+            handleButtonHover(state, message) {
+                this.hover = state;
+                this.hoverMessage = message;
             }
         }
     };
