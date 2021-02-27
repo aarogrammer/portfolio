@@ -49,7 +49,7 @@ jobs:
       run: docker push registry.digitalocean.com/awelsh/portfolio:${{ github.sha }}
 
     - name: Installing gettext to access envsubst to replace values.
-      run: apt install gettext
+      run: apt-get install gettext
 
     - name: Replace GH SHA variable with SHA value.
       run: envsubst < $GITHUB_WORKSPACE/deployments/deployment/production.yml > $GITHUB_WORKSPACE/deployments/deployment/patched_portfolio.yml
