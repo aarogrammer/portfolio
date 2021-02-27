@@ -1,4 +1,4 @@
-# Portfolio
+# portfolio
 My portfolio that I never update. I welcome feedback!
 
 ## What was used
@@ -14,16 +14,34 @@ Vue Router allowed for me to write modular routes that can have components to dy
 Webpack, a tool used to build JavaScript modules, bundles all my application together in the one place (**bundle.js**). Rather than referencing lots of JavaScript files in my markup, I import them using ES6 and use them as needed, and webpack bundles them!
 
 ### Babel
-Babel allows for me to write ES6 (ECMAScript 2015), and compiles it to JavaScript that browsers understand as ES6 isn't well supported yet.
+Babel allows for me to write newer JavaScript functionality, and compiles it to JavaScript that browsers understand as ES6 isn't well supported yet.
+
+### TypeScript
+I typically try and use TypeScript for as much JavaScript development that I can.
 
 
 ### Pure CSS
-For my frontend style, I use Pure CSS. Pure CSS allows for me to quickly create an x-platform, fully-responsive application. 
+For my frontend style, I use Pure CSS. Pure CSS allows for me to quickly create an x-platform, fully-responsive application.
 
+### Docker
+Docker allows for me to build my application, using a specific image to ensure it runs in any environment (I deploy to Kubernetes).
 
-## Files/Directories not pushed
-- **img** directory
-- **fonts** directory
+## Project setup
+```
+npm install
+```
 
-## License
-MIT
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
