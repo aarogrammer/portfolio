@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: portfolio
-    tier: backend
+    tier: frontend
     release: production
   ports: 
   - protocol: TCP
