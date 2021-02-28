@@ -18,6 +18,9 @@ spec:
       containers:
         - name: portfolio
           image: <IMAGE>
+          ports: 
+            - name: portfolio-port
+              containerPort: 8080
           resources:
             limits:
               cpu: 50m
