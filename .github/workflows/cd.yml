@@ -49,7 +49,7 @@ jobs:
       run: docker push registry.digitalocean.com/awelsh/portfolio:${{ github.sha }}
 
     - name: Update deployment file
-      run: TAG=$(echo $GITHUB_SHA) && sed -i 's|<IMAGE>|registry.digitalocean.com/awelsh/portfolio:'${TAG}'|' $GITHUB_WORKSPACE/deployments/deployment/production.yml
+      run: TAG=$(echo ${{ github.sha }}) && sed -i 's|<IMAGE>|registry.digitalocean.com/awelsh/portfolio:'${TAG}'|' $GITHUB_WORKSPACE/deployments/deployment/production.yml
 
     - name: Save DigitalOcean kubeconfig with short-lived credentials
       run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 awelsh-main-cluster
