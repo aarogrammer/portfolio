@@ -17,7 +17,7 @@ spec:
     spec: 
       containers:
         - name: portfolio
-          image: registry.digitalocean.com/awelsh/portfolio:${{ github.sha }}
+          image: <IMAGE>
           resources:
             limits:
               cpu: 50m
