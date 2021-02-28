@@ -1,29 +1,29 @@
 on:
   push:
     branches:
-      - feature/k8s
+      - master
 
 jobs:
-  # audit_lint_test:
-  #   name: audit_lint_test
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: actions/setup-node@v2
-  #     with:
-  #       node-version: '14'
-  #   - name: Install dependencies
-  #     run: |
-  #       npm i
-  #   - name: Run audit
-  #     run: |
-  #       npm audit
-  #   - name: Run linter
-  #     run: |
-  #       npm run lint
-  #   - name: Run build
-  #     run: |
-  #       npm run build
+  audit_lint_test:
+    name: audit_lint_test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    - name: Install dependencies
+      run: |
+        npm i
+    - name: Run audit
+      run: |
+        npm audit
+    - name: Run linter
+      run: |
+        npm run lint
+    - name: Run build
+      run: |
+        npm run build
   build:
     name: Build, push, and deploy
     runs-on: ubuntu-latest
