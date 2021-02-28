@@ -1,10 +1,11 @@
 # Flow to audit, lint and test each commit, but not to master.
 # Master CI will be within the CD flow.
-# This flow will run on any push to any branch.
 on:
   push:
     branches:
       - '*'
+      - '*/*'
+      - '**'
       - '!master'
 name: audit_lint_test
 jobs:
