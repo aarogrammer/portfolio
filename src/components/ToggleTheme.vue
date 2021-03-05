@@ -9,20 +9,39 @@
         props: {
             theme: {
                 type: String,
-                default: 'light'
+                default: 'dark'
             }
         },
         methods: {
             /**
              * Change and return theme.
              */
-            changeTheme() {
+            changeTheme(manualThemeChange) {
                 const body = document.getElementsByTagName('body')[0];
                 // Quick way to reset class to prevent duplicates.
                 // Body has no other classes, hence why it's safe to do this.
                 body.classList = '';
+                const themeStyle = this.theme || manualThemeChange;
                 body.classList.add(this.theme);
-                return this.theme;
+                this.setThemeCookie();
+                return themeStyle;
+            },
+            /**
+             * Get the current theme that is set within the theme cookie.
+             * Defaults to dark.
+             */
+            getCurrentThemeFromCookie() {
+                const value = `; ${document.cookie}`;
+                const parts = value.split('; theme=');
+                if (parts.length === 2) return parts.pop().split(';').shift();
+                return 'dark';
+            },
+            setThemeCookie() {
+                const date = new Date();
+                // Set cookie to expire in a year.
+                date.setTime(date.getTime() + 3600 * 1000 * 24 * 365 * 1);
+                const ttl = date.toUTCString();
+                document.cookie = `theme=${this.theme}; expires=${ttl}; path=/;`;
             }
         },
         computed: {

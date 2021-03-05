@@ -29,10 +29,15 @@
         components: {
             'toggle-theme': ToggleTheme
         },
+        mixins: [ToggleTheme],
         data() {
             return {
-                themeStyle: 'light'
+                themeStyle: null
             };
+        },
+        created() {
+            const themeFromCookie = this.getCurrentThemeFromCookie();
+            this.themeStyle = themeFromCookie;
         },
         methods: {
             changeTheme(theme) {
