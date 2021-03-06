@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.1] - 2021-03-05
+### Changed
+- Animation transition style height set to 0 to prevent scrollbar and jumping on larger screens. 
+## [3.1.0] - 2021-03-05
+### Added
+- Cookie to remember theme selection.
+- Adding a preconnect for gstatic (Google Fonts).
+
+### Changed
+- Changed default theme to dark mode 🌙.
+
 ## [3.0.0] - 2021-02-28
 ### Added
 - Docker builds
