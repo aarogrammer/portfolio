@@ -33,9 +33,10 @@ jobs:
     - name: Install dependencies
       run: |
         npm i
-    - name: Run audit
-      run: |
-        npm audit
+    # See https://github.com/aarogrammer/portfolio/pull/21
+    # - name: Run audit
+    #   run: |
+    #     npm audit
     - name: Run linter
       run: |
         npm run lint
