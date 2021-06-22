@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.2] - 2021-06-22
+
+### Added
+- Email icon with `mailto` to my email. I will probably regret this 🙃.
+- Caching node modules to ever so slightly speed up CI/CD.
+### Changed
+- Display image
+- Twitter URL
+
+### Removed
+- Temp removal of audit checks on CI and CD due to some dependencies not updating their dependencies, which are the vulnerable ones. See advisory [1755](https://npmjs.com/advisories/1755), [1754](https://npmjs.com/advisories/1754), and [1751](https://npmjs.com/advisories/1751).
+    - I am hoping to add these checks back in soon as I couldn't manually patch them.
+
 ## [3.1.1] - 2021-03-05
 ### Changed
 - Animation transition style height set to 0 to prevent scrollbar and jumping on larger screens. 
