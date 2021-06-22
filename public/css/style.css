@@ -30,10 +30,12 @@ p {
     color: #525252;
 }
 
-a > span.about-social.fab {
+a > span.about-social.fab,
+a > span.about-social.fas {
     color: #525252;
 }
-a > span.about-social.fab:hover {
+a > span.about-social.fab:hover,
+a > span.about-social.fas:hover {
     color: #16a085;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
@@ -272,7 +274,8 @@ header.header-home .container {
 header.header-home .social-icons {
     margin-top: 1.5em;
 }
-header.header-home .social-icons a .fab {
+header.header-home .social-icons a .fab,
+header.header-home .social-icons a .fas {
     color: #FFF;
     font-size: 1.8em;
     margin-right: 0.7em;
@@ -281,7 +284,8 @@ header.header-home .social-icons a .fab {
     -o-transition: color 0.3s ease;
     transition: color 0.3s ease;
 }
-header.header-home .social-icons a .fab:hover {
+header.header-home .social-icons a .fab:hover,
+header.header-home .social-icons a .fas:hover {
     color: #16a085;
 }
 header.header-home .avatar-logo {
