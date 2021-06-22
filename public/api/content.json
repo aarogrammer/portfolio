@@ -17,11 +17,15 @@
                 },
                 {
                     "icon" : "fab fa-twitter",
-                    "url" : "https://twitter.com/_aaronwelsh"
+                    "url" : "https://twitter.com/aarogrammer"
                 },
                 {
                     "icon" : "fab fa-twitch",
                     "url" : "https://twitch.com/aarogrammer"
+                },
+                {
+                    "icon" : "fas fa-envelope",
+                    "url" : "mailto:contact@awelsh.dev"
                 }
             ],
           "buttons" : [

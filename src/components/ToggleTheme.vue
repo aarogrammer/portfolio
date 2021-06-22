@@ -75,10 +75,12 @@
     body.dark section.about-me h1 {
         color: #eee;
     }
-    body.dark section.about-me .about-left-info a > span.about-social.fab {
+    body.dark section.about-me .about-left-info a > span.about-social.fab,
+    body.dark section.about-me .about-left-info a > span.about-social.fas {
         color: #eee;
     }
-    body.dark section.about-me .about-left-info a > span.about-social.fab:hover {
+    body.dark section.about-me .about-left-info a > span.about-social.fab:hover,
+    body.dark section.about-me .about-left-info a > span.about-social.fas:hover {
         color: #16a085;
     }
     body.dark section.about-me .about-right-info a {
