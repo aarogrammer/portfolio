@@ -156,7 +156,8 @@ section.about-me .about-right-info a:link {
     text-decoration: none;
 }
 
-section.about-me .about-right-info a:hover {
+body.dark section.about-me .about-right-info a:hover,
+body.light section.about-me .about-right-info a:hover {
     color: #16a085;
     -webkit-transition: color 0.3s ease;
     -moz-transition: color 0.3s ease;
@@ -298,6 +299,16 @@ header.header-home .avatar-logo .me {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+}
+header.header-home .avatar-logo .me.image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+header.header-home .avatar-logo .me.image-hover:hover {
+    opacity: 1;
 }
 header.header-home .home-intro {
     color: #FFF;
