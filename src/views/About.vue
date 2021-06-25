@@ -36,7 +36,7 @@
                             aria-hidden
                             class="fa fa-code"
                         ></span>
-                        <span class="data" v-html="content.mainStack"></span>
+                        <span class="data" v-html="content.mainStacks"></span>
                     </div>
                     <div class="about-left-info otherStack">
                         <span
@@ -44,7 +44,31 @@
                             aria-hidden
                             class="fa fa-plus"
                         ></span>
-                        <span class="data" v-html="content.otherStack"></span>
+                        <span class="data" v-html="content.otherStacks"></span>
+                    </div>
+                    <div class="about-left-info">
+                        <span
+                            title="I have experience working with"
+                            aria-hidden
+                            class="fa fa-cloud"
+                        ></span>
+                        <span class="data" v-html="content.cloudEnvs"></span>
+                    </div>
+                    <div class="about-left-info">
+                        <span
+                            title="I deploy applications for"
+                            aria-hidden
+                            class="fa fa-server"
+                        ></span>
+                        <span class="data" v-html="content.deployment"></span>
+                    </div>
+                    <div class="about-left-info">
+                        <span
+                            title="I have database experience with"
+                            aria-hidden
+                            class="fa fa-database"
+                        ></span>
+                        <span class="data" v-html="content.databases"></span>
                     </div>
                     <div class="about-left-info">
                         <a

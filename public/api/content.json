@@ -3,7 +3,17 @@
   
         "home": {
             "content" : "",
-            "image" : "/img/me.jpg",
+            "image" : {
+                "ariaLabel": "Section that has an image of myself. Hover over the image to see me waving!",
+                "main": {
+                    "src": "/img/me.jpg",
+                    "alt": "Picture of me looking class on a Munro!"
+                },
+                "mainHover": {
+                    "src": "/img/wave.jpg",
+                    "alt": "Picture of me waving!"
+                }
+            },
             "h1" : "Hello, my name is Aaron.",
             "h2" : "Software Engineer from Glasgow, Scotland.",
             "social": [
@@ -45,10 +55,13 @@
             "h1" : "My name is Aaron.",
             "location" : "Glasgow, Scotland",
             "profession" : "Software Engineer",
-            "education" : "First Class degree in BSc Hons Web and Mobile Development.",
-            "mainStack" : "Node.js (JavaScript, mostly TypeScript)",
-            "otherStack": "Python, Vue.js, PHP (LAMP stack)",
-            "copy" : "<p>I am a Software Engineer from Glasgow, Scotland. I am predominantly a backend developer but have several years of experience with frontend development.</p><p>My main stack is using Node.js with Docker (typically an alpine Linux distribution), MongoDB and/or SQL (Postgres, MSSQL) depending on the requirements. I work mostly on building microservices and deploying them to Kubernetes. The communication between microservices also depends on the requirements, but I am regularly using message brokers, REST APIs and GraphQL to bring everything together.</p> <p>With the use of Docker, most of the services I develop, regardless of the language, are deployed to Kubernetes. I typically create the K8s clusters, configure load balancers, ingress controllers and certificate management (TLS, auth rotation etc.).</p> <p>I also have experience with automating CI/CD pipelines, ensuring code quality and reliable deployments.</p> <p>My current role is Senior Software Engineer <a href='https://queryclick.com' target='_blank' rel='noopener noreferrer'>@QueryClick</a>.</p>",
+            "education" : "(BSc Hons) First Class degree in Web and Mobile Development",
+            "mainStacks" : "Node.js (JavaScript, mostly TypeScript)",
+            "otherStacks": "Python, Vue.js",
+            "cloudEnvs": "Azure, GSC, AWS, Digital Ocean",
+            "deployment": "Docker, Kubernetes, Serverless (Azure Functions)",
+            "databases": "MongoDB, MSSQL, MYSQL, PostgreSQL",
+            "copy" : "<p>I am a Software Engineer from Glasgow, Scotland. I am predominantly a backend developer but have several years of experience with frontend development.</p><p>My main stack is using Node.js with Docker, MongoDB and/or SQL (Postgres, MSSQL, MYSQL) depending on the requirements. I work mostly on building microservices and deploying them to Kubernetes. The communication between microservices also depends on the requirements, but I am regularly using message brokers, REST APIs and GraphQL to bring everything together.</p> <p>With the use of Docker, most of the services I develop, regardless of the language, are deployed to Kubernetes. I typically create the K8s clusters, configure load balancers, ingress controllers and certificate management (TLS, auth rotation etc.).</p> <p>I have experience with automating pipelines (CI/CD), ensuring code quality and reliable deployments. You can see how this application is deployed by clicking <a href='https://github.com/aarogrammer/portfolio/tree/master/.github/workflows' target='_blank'>here</a>!</p> <p>My current role is Senior Software Engineer <a href='https://queryclick.com' target='_blank' rel='noopener noreferrer'>@QueryClick</a>.</p>",
             "button" : [
                 {
                     "route" : "/contact",

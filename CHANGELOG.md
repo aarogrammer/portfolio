@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.3] - 2021-06-25
+
+### Added
+- Image hover effect to make the homepage a bit more interesting...
+- A few new sections on techs I use.
+### Changed
+- Copy for the about page.
+
 ## [3.1.2] - 2021-06-22
 
 ### Added

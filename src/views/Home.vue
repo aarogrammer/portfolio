@@ -5,8 +5,21 @@
             <div class="pure-g">
 
                 <div class="pure-u-1 pure-u-md-24-24">
-                    <div class="avatar-logo">
-                        <img class="me pure-img" :src="content.image" alt="My Face">
+                    <div
+                        class="avatar-logo"
+                        role="img"
+                        :aria-label="content.image.ariaLabel"
+                    >
+                        <img
+                            class="me pure-img"
+                            :src="content.image.main.src"
+                            :alt="content.image.main.alt"
+                        />
+                        <img
+                            class="me pure-img image-hover"
+                            :src="content.image.mainHover.src"
+                            :alt="content.image.mainHover.alt"
+                        />
                     </div>
                 </div>
                 <div class="pure-u-1">
