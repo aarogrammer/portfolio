@@ -1,5 +1,5 @@
 <template>
-    <div v-if="content">
+    <div v-if="loaded">
         <router-link to="/about" class="skip-main">Skip to about me page</router-link>
         <header class="header-home">
             <div class="pure-g">
@@ -8,24 +8,24 @@
                     <div
                         class="avatar-logo"
                         role="img"
-                        :aria-label="content.image.ariaLabel"
+                        :aria-label="image.ariaLabel"
                     >
                         <img
                             class="me pure-img"
-                            :src="content.image.main.src"
-                            :alt="content.image.main.alt"
+                            :src="image.main.src"
+                            :alt="image.main.alt"
                         />
                         <img
                             class="me pure-img image-hover"
-                            :src="content.image.mainHover.src"
-                            :alt="content.image.mainHover.alt"
+                            :src="image.mainHover.src"
+                            :alt="image.mainHover.alt"
                         />
                     </div>
                 </div>
                 <div class="pure-u-1">
                     <div class="home-intro">
-                        <h1>{{content.h1}}</h1>
-                        <h2>{{content.h2}}</h2>
+                        <h1>{{h1}}</h1>
+                        <h2>{{h2}}</h2>
                         <div class="social-icons">
                             <a
                                 v-for="x in social"
@@ -76,7 +76,10 @@
     export default {
         data() {
             return {
-                content: null,
+                loaded: false,
+                h1: null,
+                h2: null,
+                image: null,
                 social: null,
                 buttons: null,
                 hover: false,
@@ -93,14 +96,26 @@
         },
         methods: {
             async getHomeContent() {
-                const getContent = await fetch('/api/content.json');
-                const data = await getContent.json();
-                const { home: content } = data[0];
-                const { social, buttons } = content;
-                this.content = content;
-                this.social = social;
-                this.buttons = buttons;
-                document.title = 'Aaron Welsh - Portfolio'; // Set DOM title
+                try {
+                    const getContent = await fetch(`${this.apiURL}/home`);
+                    const {
+                        social,
+                        buttons,
+                        h1,
+                        h2,
+                        image,
+                        title
+                    } = await getContent.json();
+                    this.loaded = true;
+                    this.social = social;
+                    this.buttons = buttons;
+                    this.h1 = h1;
+                    this.h2 = h2;
+                    this.image = image;
+                    document.title = `${title} | Aaron Welsh`; // Set DOM title
+                } catch (err) {
+                    console.error(err);
+                }
             },
             handleButtonHover(state, message) {
                 this.hover = state;
