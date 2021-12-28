@@ -120,6 +120,15 @@ section.generic-page {
     box-shadow: 0 1px 5px #dcdcdc;
     padding: 2em;
 }
+body.dark section.generic-page {
+    background-color: #161b22;
+    box-shadow: none;
+    color: #eee;
+    transition: .2s all ease;
+}
+body.dark section.generic-page h1 {
+    color: #eee;
+}
 section.about-me .about-left-info {
     padding: 1em 0;
     position: relative;
