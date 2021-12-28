@@ -28,3 +28,14 @@ spec:
             requests:
               cpu: 10m
               memory: 100M
+          env:
+          - name: NODE_ENV
+            valueFrom:
+              configMapKeyRef:
+                name: portfolio-fe-config
+                key: node_env
+          - name: VUE_APP_API_URL
+            valueFrom:
+              configMapKeyRef:
+                name: portfolio-fe-config
+                key: vue_app_api_url

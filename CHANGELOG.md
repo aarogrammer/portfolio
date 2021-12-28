@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.0] - 2021-12-28
+### Added
+- API endpoints.
+- Error handling component.
+- Configmap manifest file.
+
+### Removed
+- Static JSON files.
+
 ## [3.1.3] - 2021-06-25
 
 ### Added
